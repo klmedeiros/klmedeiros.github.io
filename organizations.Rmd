@@ -1,0 +1,12 @@
+---
+title: "Organizations"
+---
+
+##Datanauts
+Louise was chosen as a member of the Spring 2017 class of [**NASA Datanauts**](https://open.nasa.gov/explore/datanauts/). Stay tuned for future blogs that outline Datanauts projects that Louise contributes to. <br>
+
+##Chicktech Chicago
+Louise serves as the Volunteer Coordinator for [**ChickTech Chicago**](https://chicago.chicktech.org/), an organization that focuses both on interesting high school girls in STEM fields and also providing support to women working in tech to help them stay there and have more meaningful experiences. <br>
+
+##Data for Democracy
+[**Data for Democracy**](https://medium.com/data-for-democracy) is an open-source initiative of data scientists, statisticians, developers, and designers working on projects with a socially conscious focus. Louise contributes when and where they can, and encourages all data-minded folk to check it out.
