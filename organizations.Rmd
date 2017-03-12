@@ -1,5 +1,6 @@
 ---
 title: "Organizations"
+output: html_document
 ---
 
 ##Datanauts

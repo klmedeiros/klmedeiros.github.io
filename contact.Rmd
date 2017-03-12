@@ -1,5 +1,6 @@
 ---
 title: "Contact"
+output: html_document
 ---
 
 The best way to contact Louise is through email at kaelenmedeiros at gmail dot com. 
