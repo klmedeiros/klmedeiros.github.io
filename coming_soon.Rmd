@@ -1,0 +1,5 @@
+---
+title: "To Be Determined..."
+---
+
+I hope to have my first blog entry up very soon! I plan to use this space to explain data science projects I pursue in the future.

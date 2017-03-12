@@ -1,0 +1,6 @@
+---
+title: "About"
+output: html_document
+---
+
+Louise likes cats, podcasts, aliens, and data. They are just about always learning a new programming language or learning more things in the ones they know.

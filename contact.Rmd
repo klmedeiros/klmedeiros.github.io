@@ -1,0 +1,10 @@
+---
+title: "Contact"
+---
+
+The best way to contact Louise is through email at kaelenmedeiros at gmail dot com. 
+<br>
+
+To read their opinions on statistics and cats, [**Twitter**](http://twitter.com/kaelen_medeiros) is a good place to start. <br>
+
+If their work interests you, try their [**Github**](http://github.com/klmedeiros) repository.
