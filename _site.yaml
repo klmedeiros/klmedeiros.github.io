@@ -1,0 +1,27 @@
+name: "KL Medeiros"
+navbar:
+  title: "Louise Medeiros"
+  left:
+    - text: "Contact"
+      href: contact.html
+    - text: "About"
+      href: about.html
+    - text: "Blog"
+      menu:
+        - text: "March 2017"
+        - text: "To be determined..."
+          href: coming_soon.html
+        - text: "April 2017"
+        - text: "ChiPy Blog 1: Accidental Python"
+          href: chiPy_blog1.html
+    - text: "CV"
+      href: KL_Medeiros_CV_0307.pdf
+    - text: "Organizations"
+      href: organizations.html
+output_dir: "."
+output:
+  html_document:
+    theme: yeti
+    highlight: textmate
+    include:
+      after_body: _footer.html
