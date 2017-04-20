@@ -11,6 +11,9 @@ navbar:
         - text: "March 2017"
         - text: "To be determined..."
           href: coming_soon.html
+        - text: "April 2017"
+        - text: "ChiPy Blog 1: Accidental Python"
+          href: chiPy_blog1.html
     - text: "CV"
       href: KL_Medeiros_CV_0307.pdf
     - text: "Organizations"

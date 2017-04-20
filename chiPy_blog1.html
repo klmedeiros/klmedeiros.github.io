@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Everything I Accidentally Learned Trying to Scrape the National UFO Reporting Center Database, Plus a Few Things I Learned on Purpose</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-1.1/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 45px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+
+.section h2 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h3 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h4 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h5 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h6 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Louise Medeiros</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="contact.html">Contact</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Blog
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">March 2017</li>
+    <li>
+      <a href="coming_soon.html">To be determined...</a>
+    </li>
+    <li class="dropdown-header">April 2017</li>
+    <li>
+      <a href="chiPy_blog1.html">ChiPy Blog 1: Accidental Python</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="KL_Medeiros_CV_0307.pdf">CV</a>
+</li>
+<li>
+  <a href="organizations.html">Organizations</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Everything I Accidentally Learned Trying to Scrape the National UFO Reporting Center Database, Plus a Few Things I Learned on Purpose</h1>
+
+</div>
+
+
+<p><img src="images/green-alien.jpg" /> I set out a few weeks ago a person with a grand and beautiful mission: to scrape the <a href="http://www.nuforc.org/webreports.html"><strong>National UFO Reporting Center Database</strong></a>. As we are all aware, <a href="https://www.youtube.com/watch?v=rbBX6aEzEz8"><strong>The Truth is Out There</strong></a>, and as a statistician trying to learn python for data analysis and data science purposes, I wanted to find The Truth through data.</p>
+<p>Not a true beginner to Python, I had some ideas about how I might go about scraping the database. Data mining from the web is one of my overarching goals for my time in the <a href="https://chipymentor.org/"><strong>ChiPy mentorship program</strong></a>. So, fresh and as green as what an alien could look like (who’s to be sure) I started learning <a href="https://www.scrapy.org"><strong>Scrapy</strong></a>. I followed their tutorials, which included learning how to utilize a virtual environment on my computer. <br></p>
+<ol style="list-style-type: decimal">
+<li><p><em>How to setup a virtual environment</em>: I learned this by googling it, but now I’m enough of a pro to satisfy my deeply ingrained perfectionism. I had used virtual environments inside <a href="https://c9.io/"><strong>cloud9</strong></a>, an interactive programming tool that I’ve used taking <a href="https://www.rmotr.com"><strong>rmotr.com</strong></a> classes, but had not done it on my computer yet.</p></li>
+<li><p><em>The need for more precise language</em>: On a call with Arpit, my mentor, I made the mistake of saying: “Oh I used a virtual machine for Scrapy”, at which point he was like “…I truly doubt it.” (I may have taken some leeway in representing what he said, but bear with me.) He then proceeded to explain to me the difference between a virtual machine and a virtual environment, which I will not besmirch his good name further and try to reproduce verbatim here. As a statistician, I understand that accuracy in language is crucial. It grinds my gears every time someone uses correlation when they mean association, and don’t get me started on multivariate versus multivariable. Being more precise in my language will help me communicate with other coders in the future.</p></li>
+</ol>
+<p>If you hadn’t guessed by clicking the link and looking at the NUFORC database, Scrapy wasn’t going to do it on the scraping front. I discovered very quickly that the database is about the closest thing to plain text as HTML can be. If I had read the Scrapy tutorial before I started it, I would have realized the next thing on my list.</p>
+<ol start="3" style="list-style-type: decimal">
+<li><em>Read an entire tutorial before you start it</em>: the Scrapy tutorial in the documentation teaches you how to create a spider that crawls webpages targeting specific CSS tags. The NUFORC database has no CSS, something that’s evident on-sight. I don’t consider my time spent writing a web spider in Scrapy to be time wasted, because it’s the beginning of a valuable skill I believe I will use in future work. However, I could have saved myself a lot of time and frustration if I had read the entire tutorial before beginning.</li>
+</ol>
+<p>I was first introduced to coding when I took a 2 semester Intro to Java in 2012. From there, I learned SAS and R as I was getting my Master’s degree. I am all too aware that I take for granted the fact that I know enough Python (and the other languages I know, sometimes) to read and understand it, even if I can’t write it off the top of my head.</p>
+<ol start="4" style="list-style-type: decimal">
+<li><em>Don’t underestimate the small stuff</em>: Working on this project so far, I’ve gotten a lot more comfortable using Atom. I’ve written programs in Atom and executed them from my terminal. I’m actually learning how to navigate the command line and what cd actually <em>means</em> (which, how did I not get that before??), rather than googling and copying directly. I’m picking things up, little by little, and that’s such a crucial part of this process.</li>
+</ol>
+<div id="some-things-i-learned-on-purpose" class="section level1">
+<h1>Some things I learned on purpose:</h1>
+<ol style="list-style-type: decimal">
+<li><em>API client</em>: With a partner, I built a client for interacting with the <a href="https://swapi.co/"><strong>Star Wars API</strong></a>. This is one of the assignments for rmotr.com’s Advanced Python course, and you can see my code in <a href="https://github.com/klmedeiros/pyp-w2-gw-starwars-api"><strong>this GH repository:</strong></a>. This was my first real introduction to APIs, other than hearing the word tossed around a lot, and it proved swiftly to not be my last tango with the ol’ application program interface(s) of the world. As per #4 above, this was the first program I helped write where I remembered to use .format(), a la:</li>
+</ol>
+<pre class="python"><code>        # return &#39;PeopleQuerySet: {0} objects&#39;.format(str(len(self.objects))</code></pre>
+<p>I know the code probably isn’t that exciting to see out of context, and I had to comment it out so R didn’t have a cow, but I remembered to use format statements and I’m proud of myself. I’m fortunate to have received a scholarship through <a href="https://www.womenwhocode.com/"><strong>Women Who Code</strong></a> prior to being selected for ChiPy to take rmotr.com’s Intro Python course, and Rmotr themselves generously supported me to pursue the Advanced course, where I also helped build a decorators library, a clone of Twitter complete with an API, a tic-tac-toe game, and more.</p>
+<ol start="2" style="list-style-type: decimal">
+<li><em>Networking and TensorFlow</em>: I attended the Google International Women’s Day 2017 <a href="https://www.womentechmakers.com/iwd17"><strong>Women Techmakers Summit,</strong></a> where I selected the ‘Introduction to TensorFlow’ workshop for my afternoon session. We used pretrained models in Jupyter notebooks to make some art (see below), built a simple linear regression model, and even did some basic analysis with the classic MINIT digit recognition database. I was only able to attend this workshop because of the familiarity I’ve gained with Python during rmotr’s courses and my meetings with Arpit, and we hope to integrate TensorFlow into our project so we can both learn more about it.</li>
+</ol>
+<center>
+<img src="images/2cats_styled2.jpg" alt="Not my cats" /> <img src="images/scully_styled.jpeg" alt="Actually My Cat" />
+</center>
+<p><br></p>
+<p>We utilized TF through a Docker container, which was an excellent first exposure to Docker, another thing I’ve had to use more of my newfound command line knowledge to use. It’s come in handy as my next purposeful learning opportunity came along. <br></p>
+<ol start="3" style="list-style-type: decimal">
+<li><em>Got a new side gig</em>: At my new freelance Data Scientist gig (moving on up in the world, y’all), I write R code, create an API endpoint in a Jupyter notebook which acts as a “worker” for a program of interconnected workers, all performing different parts of a complete statistical analysis. The workers are connected in a program built in Python, and once I’m more competent at building the endpoints, I get to help on that program too. I’ve seen some of the code and it’s going to be challenging, and I truly can’t wait.</li>
+</ol>
+</div>
+<div id="regarding-our-actual-chipy-mentorship-project" class="section level1">
+<h1>Regarding our Actual ChiPy Mentorship Project</h1>
+<p>Even before I set out to scrape the NUFORC, I knew dataset was already on <a href="https://www.kaggle.com/NUFORC/ufo-sightings"><strong>Kaggle</strong></a> and was additionally available in this <a href="https://github.com/planetsig/ufo-reports"><strong>GitHub repository.</strong></a>. I still wanted to try my hand at scraping, and Arpit is working on an actual solution using BeautifulSoup right now.</p>
+<p>I’m currently working on descriptive data analysis using numPy and Pandas. We plan to regroup this weekend and do scoping and decide how big our project can really be in the next few months. We’d love to do some prediction using TensorFlow and other machine learning methods. The dataset is large: about 80k sightings, and the dataset on Kaggle is also geocoded. My specific goals over the course of the ChiPy Mentorship Program include:</p>
+<ol style="list-style-type: decimal">
+<li><p>Become proficient in numPy, Pandas, Seaborn, and matplotlib</p></li>
+<li><p>Start to get familiar with scikit-learn’s methods of doing machine learning (excellent because I’ll basically be doing the same methods in tandem in R for my side gig)</p></li>
+<li><p>Continue learning how to utilize TensorFlow to explore my interest in deep learning, either with the NUFORC data or complementary data</p></li>
+<li><p>Actually scrape a relevant website to collect useful information</p></li>
+<li>Create a cool portfolio project to showcase both my strong statistical base and my newfound Python skills, care of my mentor Arpit and the other participants in the spring 2017 ChiPy Mentorship Program.<br />
+
+<center>
+<img src="images/ufo.jpg" />
+</center></li>
+</ol>
+</div>
+
+<footer role="contentinfo" id="site-footer">
+
+<!-- /.bottom-menu -->
+	<p class="copyright">&#169; 2016,
+		powered by <a href="http://www.r-project.org">R</a> + <a href="http://rmarkdown.rstudio.com">RMarkdown</a> + <a href="http://github.com">Github</a>.</p>
+</footer>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
