@@ -14,8 +14,11 @@ navbar:
         - text: "April 2017"
         - text: "ChiPy Blog 1: Accidental Python"
           href: chiPy_blog1.html
+        - text: "May 2017"
+        - text: "ChiPy Blog 2: Alternate Universe Definitions"
+          href: chiPy_blog2.html
     - text: "CV"
-      href: KL_Medeiros_CV_0307.pdf
+      href: KL_Medeiros_resume_0424.pdf
     - text: "Organizations"
       href: organizations.html
 output_dir: "."

@@ -3,7 +3,7 @@ title: "K. Louise Medeiros"
 output: html_document
 ---
 
-K. Louise Medeiros is a statistican and aspiring data scientist. They're currently employed in healthcare quality improvment at the [**American College of Surgeons**](https://www.facs.org/quality-programs/acs-nsqip/about), working extensively on [**MBSAQIP**](https://www.facs.org/quality-programs/mbsaqip) intiatives, including study design and analysis for a nationwide enhanced recovery study, along with a new quality program pilot.
+K. Louise Medeiros is a statistican and aspiring data scientist. They're currently employed as a Data Scientist working on data quality initiatives at [**HERE Technologies**](https://here.com/) in Chicago, IL.
 
 Louise has a MS in Biostatistics from the School of Public Health at [**Louisiana State University Health Sciences Center**](http://sph.lsuhsc.edu/). <br>
 

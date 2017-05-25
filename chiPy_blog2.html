@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>In Which the Statistician Sets Out to Clean Data in Python and Encounters a Parallel Universe</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-1.1/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 45px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+
+.section h2 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h3 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h4 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h5 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h6 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Louise Medeiros</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="contact.html">Contact</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Blog
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">March 2017</li>
+    <li>
+      <a href="coming_soon.html">To be determined...</a>
+    </li>
+    <li class="dropdown-header">April 2017</li>
+    <li>
+      <a href="chiPy_blog1.html">ChiPy Blog 1: Accidental Python</a>
+    </li>
+    <li class="dropdown-header">May 2017</li>
+    <li>
+      <a href="chiPy_blog2.html">ChiPy Blog 2: Alternate Universe Definitions</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="KL_Medeiros_resume_0424.pdf">CV</a>
+</li>
+<li>
+  <a href="organizations.html">Organizations</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">In Which the Statistician Sets Out to Clean Data in Python and Encounters a Parallel Universe</h1>
+
+</div>
+
+
+<p>Full disclosure, fellow ChiPys: I’m a statistician by trade. I have an MS in Biostatistics, which means I have a statistics degree but was trained in a school of public health on health data and problems, and have worked for the last year as a statistician, with a transition at the end of May planned to work as a data scientist. I’ve used SAS and R extensively in my work both in graduate school and career thus far, but very little Python. <br></p>
+<p>As a result of knowing SAS and R, both cleaning the data and writing this blog were exercises in futility, in a way: much of my time was spent knowing the name of what I wanted to do, how to do it in SAS and/or R, and Googling to figure out how to do it in Python. As my mentor Arpit put it, I knew the “parallel universe definition” of most everything I wanted to do, and had to figure out the best way to implement it in Python. I initially wrote this code in a Jupyter Notebook.<br></p>
+<p>As a reminder, I’m dealing with the <a href="http://www.nuforc.org/webreports.html"><strong>National UFO Reporting Center Database</strong></a> data, as downloaded from <a href="https://www.kaggle.com/NUFORC/ufo-sightings"><strong>Kaggle</strong></a>. The NUFORC got a mention on the <a href="https://www.nytimes.com/2017/04/24/science/ufo-sightings-book.html?_r=0"><strong>New York Times</strong></a> last month, so obviously I’m in the right place. Our goal for the project is to ultimately take the data out into TensorFlow and play around with doing some prediction.<br></p>
+<p>On Kaggle, the data is available both as ‘Complete’ and ‘Scrubbed’. The scrubbed dataset has any entry where location not found or blank plus those with blank or erroneous time removed, and I elected to use that as I worked through the cleaning.<br></p>
+<p>The biggest issue I ran into early on in cleaning: the sightings in the NUFORC database go back to the 1800s, and when using the dt.year function below on the ‘scrubbed’ dataset as downloaded, it converted many dates to ones that might seem…a little odd, like 2025, which to my knowledge has not yet happened in this particular slice of multiverse. To be totally honest–and this is the kind of thing I’ve done in my professional life as well–I cheated and used Excel to split the dates and times apart. When I did that, dt.year converted the years correctly, and I was good to go from there. One thing I’ve learned in the last year is that it isn’t always worth it to spend hours on a solution in code when a quick fix is available. This might not be the best example of a good situation to apply that principle, but I did it, and I’m okay with it.<br></p>
+<p>I wanted to go through my cleaning step-by-step, but in R, you have to keep re-importing packages and the data in each code block, so I’ll put a large portion of it below, with comments in the code. This blog is intended to be a high-level overview of my cleaning, so not all of the code will be here. <br></p>
+<pre class="python"><code>import pandas as pd
+import numpy as np
+
+#import the dataset, using read_csv from pandas
+nuforc = pd.read_csv(&#39;./scrubbedB.csv&#39;, na_values=[&#39;.&#39;], low_memory=False)
+
+#data cleaning, dates
+nuforc[&#39;date&#39;] = pd.to_datetime(nuforc[&#39;date&#39;], errors=&#39;coerce&#39;)
+nuforc.insert(1, &#39;year&#39;, nuforc[&#39;date&#39;].dt.year)
+nuforc[&#39;year&#39;] = nuforc[&#39;year&#39;].fillna(0).astype(int)
+nuforc.insert(2, &#39;month&#39;, nuforc[&#39;date&#39;].dt.month)
+nuforc.insert(3, &#39;day&#39;, nuforc[&#39;date&#39;].dt.day)
+
+#clean up other columns
+nuforc[&#39;city&#39;] = nuforc[&#39;city&#39;].str.title()
+nuforc[&#39;state&#39;] = nuforc[&#39;state&#39;].str.upper()
+nuforc[&#39;country&#39;] = nuforc[&#39;country&#39;].str.upper()
+nuforc[&#39;latitude&#39;] = pd.to_numeric(nuforc[&#39;latitude&#39;], errors=&#39;coerce&#39;)
+nuforc = nuforc.rename(columns={&#39;longitude &#39;:&#39;longitude&#39;})
+nuforc[&#39;date posted&#39;] = pd.to_datetime(nuforc[&#39;date posted&#39;], errors=&#39;coerce&#39;)
+
+#now examine datatypes
+print(nuforc.dtypes)</code></pre>
+<pre><code>## date                    datetime64[ns]
+## year                             int64
+## month                            int64
+## day                              int64
+## time                            object
+## city                            object
+## state                           object
+## country                         object
+## shape                           object
+## duration (seconds)             float64
+## duration (hours/min)            object
+## comments                        object
+## date posted             datetime64[ns]
+## latitude                       float64
+## longitude                      float64
+## dtype: object</code></pre>
+<p>I first learned, very quickly, that I should import pandas <em>as</em> pd and numpy <em>as</em> np. My first run-through cleaning, I didn’t do this, and it made life complicated to impossible. I cleaned dates and times as described above, and broke apart day, month, and year to make some graphs, which I’ll show later. <br></p>
+<p>For the next chunk, I used a technique called ‘binning’ to deal with the duration in seconds of the UFO spot. The information on binning came from an excellent resource, the blog of a data scientist Chris Albon, found <a href="https://chrisalbon.com/python/pandas_binning_data.html"><strong>here</strong></a>. I based my bins in this code on the quartiles of the duration (seconds) variable, but plan to make a few different versions with this method for use in modeling, utilizing bins of different sizes. <br></p>
+<pre class="python"><code>import pandas as pd
+#import the dataset again
+nuforc = pd.read_csv(&#39;./scrubbedB.csv&#39;, na_values=[&#39;.&#39;], low_memory=False)
+
+nuforc[&#39;duration (seconds)&#39;].describe()
+#HUGE range here of times. 
+
+#Define times for the bins:
+bins = [0, 30, 180, 600, 97836000]
+
+#Create group names:
+group_names = [&#39;Q1&#39;, &#39;Q2&#39;, &#39;Q3&#39;, &#39;Q4&#39;]
+
+#Cut the duration (seconds) variable
+duration_cats = pd.cut(nuforc[&#39;duration (seconds)&#39;], bins, labels=group_names)
+nuforc[&#39;duration_cats&#39;] = pd.cut(nuforc[&#39;duration (seconds)&#39;], bins, labels=group_names)
+
+#display a few, to demonstrate:
+print(duration_cats[1])
+print(duration_cats[10000])
+</code></pre>
+<pre><code>## Q4
+## Q2</code></pre>
+<p>Another interesting piece of cleaning I performed on this dataset was on the ‘shape’ variable. In the raw data, this variable has 29 unique categories (too many!), as displayed below, with frequency counts attained from the value_counts() function: <br> light 16565* <br> triangle 7865* <br> circle 7608* <br> fireball 6208* <br> other 5649* <br> unknown 5584* <br> sphere 5387* <br> disk 5213* <br> oval 3733* <br> formation 2457* <br> cigar 2057* <br> changing 1962* <br> flash 1328* <br> rectangle 1297* <br> cylinder 1283* <br> diamond 1178* <br> chevron 952* <br> egg 759* <br> teardrop 750* <br> cone 316* <br> cross 233* <br> delta 7* <br> crescent 2* <br> round 2* <br> flare 1* <br> pyramid 1* <br> dome 1* <br> hexagon 1* <br> changed 1* <br></p>
+<p>As you can imagine, this isn’t helpful in any way. I decided to regroup these, because a triangle is sort of like a pyramid, changed can safely (in my opinion) be equated with changing, an egg is like a teardrop, etc. I took it down to 10 types, as listed below: <br> changing = changed, changing<br> unknown = unknown<br> other = other, cross, hexagon (I stuck shapes I didn’t know what else to do with them here)<br> light_related =light, flare flash (these are related to quality of light, and not technically a shape, but I’m rolling with it)<br> formation = formation (I think this means “multiple UFOs spotted” but I’m not totally sure)<br> triangular = triangle, delta, pyramid, cone<br> ovular = oval, cigar, teardrop, egg, fireball<br> round = circle, sphere, disk, round, dome, cylinder<br> bent = chevron, crescent<br> rectangular = rectangle, diamond <br></p>
+<p>Since this is a bit of a fancy replacement, I did so by mapping values with a dictionary, as below:</p>
+<pre class="python"><code>#is a lot more complicated replace than usual, so we&#39;re going to get fancy:
+import pandas as pd
+#import the dataset again
+nuforc = pd.read_csv(&#39;./scrubbedB.csv&#39;, na_values=[&#39;.&#39;], low_memory=False)
+
+#dict must include every single value, even if mapping to the same category!!
+dict = {&#39;changed&#39;:&#39;changing&#39;, &#39;changing&#39;:&#39;changing&#39;, &#39;cross&#39;:&#39;other&#39;, &#39;hexagon&#39;:&#39;other&#39;,
+        &#39;light&#39;:&#39;light_related&#39;, &#39;flare&#39;:&#39;light_related&#39;, &#39;flash&#39;:&#39;light_related&#39;, 
+        &#39;triangle&#39;:&#39;triangular&#39;, &#39;delta&#39;:&#39;triangular&#39;, &#39;pyramid&#39;: &#39;triangular&#39;, 
+        &#39;cone&#39;: &#39;triangular&#39;, &#39;oval&#39;:&#39;ovular&#39;,         
+        &#39;cigar&#39;:&#39;ovular&#39;,&#39;teardrop&#39;:&#39;ovular&#39;,&#39;egg&#39;:&#39;ovular&#39;,&#39;circle&#39;:&#39;round&#39;,
+        &#39;sphere&#39;:&#39;round&#39;,&#39;disk&#39;:&#39;round&#39;,&#39;dome&#39;:&#39;round&#39;,&#39;cylinder&#39;:&#39;round&#39;,&#39;chevron&#39;:&#39;bent&#39;, 
+        &#39;crescent&#39;:&#39;bent&#39;, &#39;rectangle&#39;:&#39;rectangular&#39;,&#39;diamond&#39;:&#39;rectangular&#39;, 
+        &#39;fireball&#39;:&#39;ovular&#39;,&#39;unknown&#39;:&#39;unknown&#39;, &#39;other&#39;:&#39;other&#39;, &#39;formation&#39;:&#39;formation&#39;, &#39;round&#39;:&#39;round&#39;}
+#actual mapping below:
+nuforc[&#39;clean_shape&#39;]=nuforc[&#39;shape&#39;].map(dict)
+
+print(nuforc[&#39;clean_shape&#39;].value_counts())</code></pre>
+<pre><code>## round            19494
+## light_related    17894
+## ovular           13507
+## triangular        8189
+## other             5883
+## unknown           5584
+## rectangular       2475
+## formation         2457
+## changing          1963
+## bent               954
+## Name: clean_shape, dtype: int64</code></pre>
+<p>These look a lot cleaner and easier to work with, so I hope to use these moving foward, but may also make a second with further collapsed categories. <br></p>
+<p>One of the visualization-based cleaning exercises I undertook was to make some basic frequency plots in matplotlib. I wanted to see frequencies of UFO spots across both the months of the years and the days of the month to try and spot patterns. I used the documentation for Seaborn to build these, which I found very helpful and thorough.<br></p>
+<pre class="python"><code>#import again, plus seaborn
+import pandas as pd
+import seaborn as sns
+#import dataset again
+nuforc = pd.read_csv(&#39;./scrubbedB.csv&#39;, na_values=[&#39;.&#39;], low_memory=False)
+#data cleaning, dates, part 2
+nuforc[&#39;date&#39;] = pd.to_datetime(nuforc[&#39;date&#39;], errors=&#39;coerce&#39;)
+nuforc.insert(1, &#39;year&#39;, nuforc[&#39;date&#39;].dt.year)
+nuforc[&#39;year&#39;] = nuforc[&#39;year&#39;].fillna(0).astype(int)
+nuforc.insert(2, &#39;month&#39;, nuforc[&#39;date&#39;].dt.month)
+nuforc.insert(3, &#39;day&#39;, nuforc[&#39;date&#39;].dt.day)
+
+#make a histogram of months
+sns.countplot(x=&quot;month&quot;, data=nuforc, palette=&quot;Greens_d&quot;);
+sns.plt.show()
+
+#histogram of days
+sns.countplot(x=&quot;day&quot;, data=nuforc, palette=&quot;Greens_d&quot;);
+sns.plt.show()</code></pre>
+<center>
+<img src="images/month.png" />
+</center>
+<center>
+<img src="images/day.png" />
+</center>
+<p>I was not surprised to see the results of the Month plot, which showed the highest number of UFO spots during the United States’ summer and fall months of June through October, when I’d guess more people are outside. The low number of spots from December through February are also pretty standard. I did find it sort of strange on the Day plot that spots peak on the 1st and 15th of the month, but remain pretty constant at all other days of the month. I don’t have a working theory for that yet, but expect to have one as I go.<br></p>
+<p>Again, this wasn’t all of the cleaning I conducted on this data, but is instead a highlight of the more interesting bits of cleaning for me as someone who knows SAS and R. One trend I noticed as I was working is that across nearly all the variables there are so many UFO spots of so many different types that everything is fairly uniform. This is going to prove to be a very interesting challenge when it comes to modeling, and specifically it’s a challenge that means we may not find any “useful” or “meaningful” or even “reasonable” results. We will, however, learn a lot along the way!<br></p>
+<p>Next steps include more visualization, basic models (GLMs), then some machine learning models using scikitlearn and hopefuly TensorFlow. Arpit and I both hope to learn more about using TF, so that’s a joint goal we have moving into the last month of the Mentorship program. As always, remember, <a href="https://www.youtube.com/watch?v=rbBX6aEzEz8"><strong>The Truth is Out There</strong></a>.</p>
+
+<footer role="contentinfo" id="site-footer">
+
+<!-- /.bottom-menu -->
+	<p class="copyright">&#169; 2016,
+		powered by <a href="http://www.r-project.org">R</a> + <a href="http://rmarkdown.rstudio.com">RMarkdown</a> + <a href="http://github.com">Github</a>.</p>
+</footer>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
