@@ -3,7 +3,7 @@ title: "K. Louise Medeiros"
 output: html_document
 ---
 
-K. Louise Medeiros is a statistican and aspiring data scientist. They're currently employed as a Data Scientist working on data quality initiatives at [**HERE Technologies**](https://here.com/) in Chicago, IL.
+K. Louise Medeiros is a statistician and data scientist. They're currently employed as a Data Scientist working on data quality initiatives at [**HERE Technologies**](https://here.com/) in Chicago, IL.
 
 Louise has a MS in Biostatistics from the School of Public Health at [**Louisiana State University Health Sciences Center**](http://sph.lsuhsc.edu/). <br>
 
