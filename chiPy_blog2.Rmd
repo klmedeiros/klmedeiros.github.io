@@ -17,7 +17,7 @@ The biggest issue I ran into early on in cleaning: the sightings in the NUFORC d
 
 I wanted to go through my cleaning step-by-step, but in R, you have to keep re-importing packages and the data in each code block, so I'll put a large portion of it below, with comments in the code. This blog is intended to be a high-level overview of my cleaning, so not all of the code will be here. <br>
 
-```{python}
+```{python eval = FALSE}
 import pandas as pd
 import numpy as np
 
@@ -48,7 +48,7 @@ I first learned, very quickly, that I should import pandas *as* pd and numpy *as
 
 For the next chunk, I used a technique called 'binning' to deal with the duration in seconds of the UFO spot. The information on binning came from an excellent resource, the blog of a data scientist Chris Albon, found [**here**](https://chrisalbon.com/python/pandas_binning_data.html). I based my bins in this code on the quartiles of the duration (seconds) variable, but plan to make a few different versions with this method for use in modeling, utilizing bins of different sizes. <br>
 
-```{python}
+```{python eval = FALSE}
 import pandas as pd
 #import the dataset again
 nuforc = pd.read_csv('./scrubbedB.csv', na_values=['.'], low_memory=False)
@@ -116,7 +116,7 @@ bent = chevron, crescent<br>
 rectangular = rectangle, diamond <br>
 
 Since this is a bit of a fancy replacement, I did so by mapping values with a dictionary, as below:
-```{python}
+```{python eval = FALSE}
 #is a lot more complicated replace than usual, so we're going to get fancy:
 import pandas as pd
 #import the dataset again
@@ -141,7 +141,7 @@ These look a lot cleaner and easier to work with, so I hope to use these moving 
 
 One of the visualization-based cleaning exercises I undertook was to make some basic frequency plots in matplotlib. I wanted to see frequencies of UFO spots across both the months of the years and the days of the month to try and spot patterns. I used the documentation for Seaborn to build these, which I found very helpful and thorough.<br>
 
-```{python}
+```{python eval = FALSE}
 #import again, plus seaborn
 import pandas as pd
 import seaborn as sns

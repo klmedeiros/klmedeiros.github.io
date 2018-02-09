@@ -1,13 +1,13 @@
 ---
-title: "K. Louise Medeiros"
+title: "Kaelen L.. Medeiros"
 output: html_document
 ---
 
-K. Louise Medeiros is a statistician and data scientist. They're currently employed as a Data Scientist working on data quality initiatives at [**HERE Technologies**](https://here.com/) in Chicago, IL.
+Kaelen L. Medeiros is a statistician and data scientist. They're currently employed as a Data Scientist working the Quality Testing and Statistics Team at [**HERE Technologies**](https://here.com/) in Chicago, IL, where they often serve as an "internal consultant" to other teams to help design their sampling strategies and quality audit processes.
 
-Louise has a MS in Biostatistics from the School of Public Health at [**Louisiana State University Health Sciences Center**](http://sph.lsuhsc.edu/). <br>
+Kaelen has a MS in Biostatistics from the School of Public Health at [**Louisiana State University Health Sciences Center**](http://sph.lsuhsc.edu/). <br>
 
-For more information about organizations and projects Louise is active in, see the Organizations tab.
+For more information about organizations and projects Kaelen is active in, see the Organizations tab.
 
 ----
 

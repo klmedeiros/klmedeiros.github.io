@@ -4,7 +4,7 @@
 
 <head>
 
-<meta charset="utf-8">
+<meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 
@@ -20,8 +20,8 @@
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-1.1/textmate.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -30,10 +30,12 @@
   }
 </style>
 <script type="text/javascript">
-if (window.hljs && document.readyState && document.readyState === "complete") {
-   window.setTimeout(function() {
-      hljs.initHighlighting();
-   }, 0);
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
 }
 </script>
 
@@ -171,7 +173,7 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Louise Medeiros</a>
+      <a class="navbar-brand" href="index.html">Kaelen L. Medeiros</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -203,7 +205,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li>
-  <a href="KL_Medeiros_resume_0424.pdf">CV</a>
+  <a href="KL_Medeiros_resume_0208.pdf">CV</a>
 </li>
 <li>
   <a href="organizations.html">Organizations</a>
@@ -244,7 +246,7 @@ $(document).ready(function () {
 <ol style="list-style-type: decimal">
 <li><em>API client</em>: With a partner, I built a client for interacting with the <a href="https://swapi.co/"><strong>Star Wars API</strong></a>. This is one of the assignments for rmotr.com’s Advanced Python course, and you can see my code in <a href="https://github.com/klmedeiros/pyp-w2-gw-starwars-api"><strong>this GH repository:</strong></a>. This was my first real introduction to APIs, other than hearing the word tossed around a lot, and it proved swiftly to not be my last tango with the ol’ application program interface(s) of the world. As per #4 above, this was the first program I helped write where I remembered to use .format(), a la:</li>
 </ol>
-<pre class="python"><code>        # return &#39;PeopleQuerySet: {0} objects&#39;.format(str(len(self.objects))</code></pre>
+<pre class="r"><code>        # return &#39;PeopleQuerySet: {0} objects&#39;.format(str(len(self.objects))</code></pre>
 <p>I know the code probably isn’t that exciting to see out of context, and I had to comment it out so R didn’t have a cow, but I remembered to use format statements and I’m proud of myself. I’m fortunate to have received a scholarship through <a href="https://www.womenwhocode.com/"><strong>Women Who Code</strong></a> prior to being selected for ChiPy to take rmotr.com’s Intro Python course, and Rmotr themselves generously supported me to pursue the Advanced course, where I also helped build a decorators library, a clone of Twitter complete with an API, a tic-tac-toe game, and more.</p>
 <ol start="2" style="list-style-type: decimal">
 <li><em>Networking and TensorFlow</em>: I attended the Google International Women’s Day 2017 <a href="https://www.womentechmakers.com/iwd17"><strong>Women Techmakers Summit,</strong></a> where I selected the ‘Introduction to TensorFlow’ workshop for my afternoon session. We used pretrained models in Jupyter notebooks to make some art (see below), built a simple linear regression model, and even did some basic analysis with the classic MINIT digit recognition database. I was only able to attend this workshop because of the familiarity I’ve gained with Python during rmotr’s courses and my meetings with Arpit, and we hope to integrate TensorFlow into our project so we can both learn more about it.</li>
@@ -304,7 +306,7 @@ $(document).ready(function () {
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
 </script>

@@ -4,7 +4,7 @@
 
 <head>
 
-<meta charset="utf-8">
+<meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 
@@ -20,8 +20,8 @@
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-1.1/textmate.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -30,10 +30,12 @@
   }
 </style>
 <script type="text/javascript">
-if (window.hljs && document.readyState && document.readyState === "complete") {
-   window.setTimeout(function() {
-      hljs.initHighlighting();
-   }, 0);
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
 }
 </script>
 
@@ -171,7 +173,7 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Louise Medeiros</a>
+      <a class="navbar-brand" href="index.html">Kaelen L. Medeiros</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -203,7 +205,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li>
-  <a href="KL_Medeiros_resume_0424.pdf">CV</a>
+  <a href="KL_Medeiros_resume_0208.pdf">CV</a>
 </li>
 <li>
   <a href="organizations.html">Organizations</a>
@@ -225,21 +227,31 @@ $(document).ready(function () {
 </div>
 
 
+<div id="active-projects" class="section level1">
+<h1>Active Projects</h1>
+<div id="r-ladies-chicago" class="section level2">
+<h2>R-Ladies Chicago</h2>
+<p>Kaelen is a co-organizer for the Chicago chapter of <a href="https://rladies.org/"><strong>R-Ladies</strong></a>. Catch up with us on our <a href="https://twitter.com/RLadiesChicago"><strong>Twitter</strong></a> or <a href="https://www.meetup.com/rladies-chicago"><strong>Meetup</strong></a> pages. <br></p>
+</div>
 <div id="datanauts" class="section level2">
 <h2>Datanauts</h2>
-<p>Louise was chosen as a member of the Spring 2017 class of <a href="https://open.nasa.gov/explore/datanauts/"><strong>NASA Datanauts</strong></a>. Stay tuned for future blogs that outline Datanauts projects that Louise contributes to. <br></p>
+<p>Kaelen was chosen as a member of the Spring 2017 class of <a href="https://open.nasa.gov/explore/datanauts/"><strong>NASA Datanauts</strong></a>. <br></p>
 </div>
+</div>
+<div id="organizations-i-endorse" class="section level1">
+<h1>Organizations I endorse</h1>
 <div id="chicktech-chicago" class="section level2">
 <h2>Chicktech Chicago</h2>
-<p>Louise serves as the Volunteer Coordinator for <a href="https://chicago.chicktech.org/"><strong>ChickTech Chicago</strong></a>, an organization that focuses both on interesting high school girls in STEM fields and also providing support to women working in tech to help them stay there and have more meaningful experiences. <br></p>
+<p>Kaelen previously served as the Volunteer Coordinator for <a href="https://chicago.chicktech.org/"><strong>ChickTech Chicago</strong></a>. <br></p>
 </div>
 <div id="chipy-mentorship-program" class="section level2">
 <h2>ChiPy Mentorship Program</h2>
-<p>Louise was chosen as a mentee for the Spring 2017 cohort for <a href="https://chipymentor.org/"><strong>ChiPy Mentorship Program</strong></a>, offered through the Chicago Python (ChiPy) user group. Together with her software developer mentor, they’ll embark on a project written in Python together through July 2017. Stay tuned for blogs that detail that project. <br></p>
+<p>Kaelen was a mentee for the Spring 2017 cohort for <a href="https://chipymentor.org/"><strong>ChiPy Mentorship Program</strong></a>, offered through the Chicago Python (ChiPy) user group. <br></p>
 </div>
 <div id="data-for-democracy" class="section level2">
 <h2>Data for Democracy</h2>
-<p><a href="https://medium.com/data-for-democracy"><strong>Data for Democracy</strong></a> is an open-source initiative of data scientists, statisticians, developers, and designers working on projects with a socially conscious focus. Louise contributes when and where they can, and encourages all data-minded folk to check it out.</p>
+<p><a href="https://medium.com/data-for-democracy"><strong>Data for Democracy</strong></a> is an open-source initiative of data scientists, statisticians, developers, and designers working on projects with a socially conscious focus. Any and all data-minded folk should check it out.</p>
+</div>
 </div>
 
 <footer role="contentinfo" id="site-footer">
@@ -271,7 +283,7 @@ $(document).ready(function () {
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
 </script>

@@ -4,7 +4,7 @@
 
 <head>
 
-<meta charset="utf-8">
+<meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 
@@ -20,8 +20,8 @@
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-1.1/textmate.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -30,10 +30,12 @@
   }
 </style>
 <script type="text/javascript">
-if (window.hljs && document.readyState && document.readyState === "complete") {
-   window.setTimeout(function() {
-      hljs.initHighlighting();
-   }, 0);
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
 }
 </script>
 
@@ -171,7 +173,7 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Louise Medeiros</a>
+      <a class="navbar-brand" href="index.html">Kaelen L. Medeiros</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -203,7 +205,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li>
-  <a href="KL_Medeiros_resume_0424.pdf">CV</a>
+  <a href="KL_Medeiros_resume_0208.pdf">CV</a>
 </li>
 <li>
   <a href="organizations.html">Organizations</a>
@@ -225,9 +227,10 @@ $(document).ready(function () {
 </div>
 
 
-<p>The best way to contact Louise is through email at kaelenmedeiros at gmail dot com. <br></p>
+<p>The best way to contact Kaelen is through email at kaelenmedeiros at gmail dot com. <br></p>
 <p>To read their opinions on statistics and cats, <a href="http://twitter.com/kaelen_medeiros"><strong>Twitter</strong></a> is a good place to start. <br></p>
-<p>If their work interests you, try their <a href="http://github.com/klmedeiros"><strong>Github</strong></a> repository.</p>
+<p>If <a href="https://www.linkedin.com/in/kaelen-medeiros-b0aab547/"><strong>LinkedIn</strong></a> is more your bag, click to go there and see a pretty cute headshot + more detailed info on Kaelen’s work. <br></p>
+<p>If their work interests you, try their <a href="http://github.com/klmedeiros"><strong>Github</strong></a> repository, though much of the code they write is proprietary, and therfore not visible.</p>
 
 <footer role="contentinfo" id="site-footer">
 
@@ -258,7 +261,7 @@ $(document).ready(function () {
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
 </script>

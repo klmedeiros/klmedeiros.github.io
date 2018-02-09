@@ -3,4 +3,4 @@ title: "About"
 output: html_document
 ---
 
-Louise likes cats, podcasts, aliens, and data. They are just about always learning a new programming language or learning more things in the ones they know.
+Kaelen likes cats, podcasts, aliens, and data. They are basically always on [**twutter**](http://twitter.com/kaelen_medeiros) and always has two RStudio projects open at a time. 

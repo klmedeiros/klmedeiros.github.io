@@ -23,7 +23,7 @@ I was first introduced to coding when I took a 2 semester Intro to Java in 2012.
 #Some things I learned on purpose:
 
 1. *API client*: With a partner, I built a client for interacting with the [**Star Wars API**](https://swapi.co/). This is one of the assignments for rmotr.com’s Advanced Python course, and you can see my code in [**this GH repository:**](https://github.com/klmedeiros/pyp-w2-gw-starwars-api). This was my first real introduction to APIs, other than hearing the word tossed around a lot, and it proved swiftly to not be my last tango with the ol' application program interface(s) of the world. As per #4 above, this was the first program I helped write where I remembered to use .format(), a la:
-```{python}
+```{r eval = FALSE}
         # return 'PeopleQuerySet: {0} objects'.format(str(len(self.objects))
 ```
 I know the code probably isn't that exciting to see out of context, and I had to comment it out so R didn't have a cow, but I remembered to use format statements and I'm proud of myself. I'm fortunate to have received a scholarship through [**Women Who Code**](https://www.womenwhocode.com/) prior to being selected for ChiPy to take rmotr.com's Intro Python course, and Rmotr themselves generously supported me to pursue the Advanced course, where I also helped build a decorators library, a clone of Twitter complete with an API, a tic-tac-toe game, and more.

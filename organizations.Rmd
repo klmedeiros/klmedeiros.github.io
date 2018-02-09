@@ -3,14 +3,21 @@ title: "Organizations"
 output: html_document
 ---
 
-##Datanauts
-Louise was chosen as a member of the Spring 2017 class of [**NASA Datanauts**](https://open.nasa.gov/explore/datanauts/). Stay tuned for future blogs that outline Datanauts projects that Louise contributes to. <br>
+#Active Projects
 
+##R-Ladies Chicago
+Kaelen is a co-organizer for the Chicago chapter of [**R-Ladies**](https://rladies.org/). Catch up with us on our [**Twitter**](https://twitter.com/RLadiesChicago) or [**Meetup**](https://www.meetup.com/rladies-chicago) pages. <br>
+
+##Datanauts
+Kaelen was chosen as a member of the Spring 2017 class of [**NASA Datanauts**](https://open.nasa.gov/explore/datanauts/). <br>
+
+
+#Organizations I endorse
 ##Chicktech Chicago
-Louise serves as the Volunteer Coordinator for [**ChickTech Chicago**](https://chicago.chicktech.org/), an organization that focuses both on interesting high school girls in STEM fields and also providing support to women working in tech to help them stay there and have more meaningful experiences. <br>
+Kaelen previously served as the Volunteer Coordinator for [**ChickTech Chicago**](https://chicago.chicktech.org/). <br>
 
 ##ChiPy Mentorship Program
-Louise was chosen as a mentee for the Spring 2017 cohort for [**ChiPy Mentorship Program**](https://chipymentor.org/), offered through the Chicago Python (ChiPy) user group. Together with her software developer mentor, they'll embark on a project written in Python together through July 2017. Stay tuned for blogs that detail that project. <br>
+Kaelen was a mentee for the Spring 2017 cohort for [**ChiPy Mentorship Program**](https://chipymentor.org/), offered through the Chicago Python (ChiPy) user group. <br>
 
 ##Data for Democracy
-[**Data for Democracy**](https://medium.com/data-for-democracy) is an open-source initiative of data scientists, statisticians, developers, and designers working on projects with a socially conscious focus. Louise contributes when and where they can, and encourages all data-minded folk to check it out.
+[**Data for Democracy**](https://medium.com/data-for-democracy) is an open-source initiative of data scientists, statisticians, developers, and designers working on projects with a socially conscious focus. Any and all data-minded folk should check it out.
