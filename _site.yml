@@ -17,8 +17,6 @@ navbar:
         - text: "May 2017"
         - text: "ChiPy Blog 2: Alternate Universe Definitions"
           href: chiPy_blog2.html
-    - text: "CV"
-      href: KL_Medeiros_resume_0208.pdf
     - text: "Organizations"
       href: organizations.html
 output_dir: "."

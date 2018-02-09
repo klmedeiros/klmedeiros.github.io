@@ -5,19 +5,19 @@ output: html_document
 
 #Active Projects
 
-##R-Ladies Chicago
+####R-Ladies Chicago
 Kaelen is a co-organizer for the Chicago chapter of [**R-Ladies**](https://rladies.org/). Catch up with us on our [**Twitter**](https://twitter.com/RLadiesChicago) or [**Meetup**](https://www.meetup.com/rladies-chicago) pages. <br>
 
-##Datanauts
+####Datanauts
 Kaelen was chosen as a member of the Spring 2017 class of [**NASA Datanauts**](https://open.nasa.gov/explore/datanauts/). <br>
 
 
-#Organizations I endorse
-##Chicktech Chicago
+#I endorse...
+####Chicktech Chicago
 Kaelen previously served as the Volunteer Coordinator for [**ChickTech Chicago**](https://chicago.chicktech.org/). <br>
 
-##ChiPy Mentorship Program
+####ChiPy Mentorship Program
 Kaelen was a mentee for the Spring 2017 cohort for [**ChiPy Mentorship Program**](https://chipymentor.org/), offered through the Chicago Python (ChiPy) user group. <br>
 
-##Data for Democracy
+####Data for Democracy
 [**Data for Democracy**](https://medium.com/data-for-democracy) is an open-source initiative of data scientists, statisticians, developers, and designers working on projects with a socially conscious focus. Any and all data-minded folk should check it out.

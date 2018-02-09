@@ -1,5 +1,5 @@
 ---
-title: "Kaelen L.. Medeiros"
+title: "Kaelen L. Medeiros"
 output: html_document
 ---
 
