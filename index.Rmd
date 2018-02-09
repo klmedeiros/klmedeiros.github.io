@@ -1,7 +1,7 @@
 ---
 title: "Kaelen L. Medeiros"
 output: html_document
----
+--- 
 
 Kaelen L. Medeiros is a statistician and data scientist. They're currently employed as a Data Scientist working the Quality Testing and Statistics Team at [**HERE Technologies**](https://here.com/) in Chicago, IL, where they often serve as an "internal consultant" to other teams to help design their sampling strategies and quality audit processes.
 

@@ -2,7 +2,7 @@
 title: "Everything I Accidentally Learned Trying to Scrape the National UFO Reporting Center Database, Plus a Few Things I Learned on Purpose"
 output: html_document
 ---
-
+ 
 <img src="images/green-alien.jpg" align="left" />  I set out a few weeks ago a person with a grand and beautiful mission: to scrape the [**National UFO Reporting Center Database**](http://www.nuforc.org/webreports.html). As we are all aware, [**The Truth is Out There**](https://www.youtube.com/watch?v=rbBX6aEzEz8), and as a statistician trying to learn python for data analysis and data science purposes, I wanted to find The Truth through data.
 
 Not a true beginner to Python, I had some ideas about how I might go about scraping the database. Data mining from the web is one of my overarching goals for my time in the [**ChiPy mentorship program**](https://chipymentor.org/). So, fresh and as green as what an alien could look like (who’s to be sure) I started learning [**Scrapy**](https://www.scrapy.org). I followed their tutorials, which included learning how to utilize a virtual environment on my computer. <br>
