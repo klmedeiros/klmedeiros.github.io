@@ -1,6 +1,0 @@
----
-title: "About"
-output: html_document
----
-
-Kaelen likes cats, podcasts, aliens, and data. They are basically always on [**twitter**](http://twitter.com/kaelen_medeiros) and always has two RStudio projects open at a time.

@@ -1,13 +1,16 @@
 ---
-title: "Kaelen L. Medeiros"
+title: ""
 output: html_document
 --- 
+<br>
+<br>
+<img src="images/kaelen_red.jpg" align="left" height="300px" width="200px" hspace="20" />
 
-Kaelen L. Medeiros is a statistician and data scientist. They're currently employed as a Data Scientist working the Quality Testing and Statistics Team at [**HERE Technologies**](https://here.com/) in Chicago, IL, where they often serve as an "internal consultant" to other teams to help design their sampling strategies and quality audit processes.
+Kaelen likes cats, podcasts, aliens, and data. They are basically always on [**twitter**](http://twitter.com/kaelen_medeiros) and consistently have two RStudio projects open at a time on both their work and personal computers. 
 
-Kaelen has a MS in Biostatistics from the School of Public Health at [**Louisiana State University Health Sciences Center**](http://sph.lsuhsc.edu/). <br>
+Kaelen works as a statistician and data scientist. Currently they work as a Content Quality Analyst at [**DataCamp**](https://www.datacamp.com/home), where they've also authored a course on [**Experimental Design in R**](https://www.datacamp.com/courses/experimental-design-in-r). On the side, they work as a freelance data scientist focused on experimental design, API development, and automation in statistics and data science.
 
-For more information about organizations and projects Kaelen is active in, see the Organizations tab.
+Kaelen received their MS in Biostatistics from the School of Public Health at [**Louisiana State University Health Sciences Center**](http://sph.lsuhsc.edu/) in 2016. <br>
 
 ----
 

@@ -1,13 +1,17 @@
 ---
-title: "Contact"
+title: ""
 output: html_document
 ---
-
-The best way to contact Kaelen is through email at kaelenmedeiros at gmail dot com. 
 <br>
 
-To read their opinions on statistics and cats, [**Twitter**](http://twitter.com/kaelen_medeiros) is a good place to start. <br>
+###Email
+The best way to contact Kaelen is through email at kaelenmedeiros at gmail dot com. <br>
+
+###Twitter
+To read their opinions on data science and cats, [**Twitter**](http://twitter.com/kaelen_medeiros) is a good place to start. <br>
  
+###LinkedIn
 If [**LinkedIn**](https://www.linkedin.com/in/kaelen-medeiros-b0aab547/) is more your bag, click to go there and see a pretty cute headshot + more detailed info on Kaelen's work. <br>
 
-If their work interests you, try their [**Github**](http://github.com/klmedeiros) repository, though much of the code they write is proprietary, and therefore not visible.
+###GitHub
+If their code interests you, try [**Github**](http://github.com/klmedeiros). Though much of the code they write is proprietary, and therefore not visible, youc an start to get an idea of what they're up to.

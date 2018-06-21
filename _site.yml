@@ -4,25 +4,25 @@ navbar:
   left:
     - text: "Contact"
       href: contact.html
-    - text: "About"
-      href: about.html
+    - text: "CV"
+      href: CV.html  
+    - text: "Organizations"
+      href: organizations.html  
     - text: "Blog"
       menu:
-        - text: "March 2017"
-        - text: "To be determined..."
-          href: coming_soon.html
-        - text: "April 2017"
-        - text: "ChiPy Blog 1: Accidental Python"
-          href: chiPy_blog1.html
         - text: "May 2017"
         - text: "ChiPy Blog 2: Alternate Universe Definitions"
           href: chiPy_blog2.html
-    - text: "Organizations"
-      href: organizations.html
+        - text: "April 2017"
+        - text: "ChiPy Blog 1: Accidental Python"
+          href: chiPy_blog1.html
+        - text: "March 2017"
+        - text: "To be determined..."
+          href: coming_soon.html
 output_dir: "."
 output:
   html_document:
     theme: yeti
     highlight: textmate
-    include:
-      after_body: _footer.html
+#    include:
+#      after_body: _footer.html

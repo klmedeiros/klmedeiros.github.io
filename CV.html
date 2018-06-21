@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title></title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 45px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+
+.section h2 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h3 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h4 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h5 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h6 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Kaelen L. Medeiros</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="contact.html">Contact</a>
+</li>
+<li>
+  <a href="CV.html">CV</a>
+</li>
+<li>
+  <a href="organizations.html">Organizations</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Blog
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">May 2017</li>
+    <li>
+      <a href="chiPy_blog2.html">ChiPy Blog 2: Alternate Universe Definitions</a>
+    </li>
+    <li class="dropdown-header">April 2017</li>
+    <li>
+      <a href="chiPy_blog1.html">ChiPy Blog 1: Accidental Python</a>
+    </li>
+    <li class="dropdown-header">March 2017</li>
+    <li>
+      <a href="coming_soon.html">To be determined...</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<p><br></p>
+<div id="experience" class="section level3">
+<h3>Experience</h3>
+<div id="datacamp-content-quality-analyst" class="section level4">
+<h4>DataCamp : Content Quality Analyst</h4>
+<div id="may-2018---present" class="section level5">
+<h5>May 2018 - present</h5>
+<ul>
+<li>First onboarded member of the Content Quality team, with <a href="https://www.linkedin.com/in/richierocks">Richie Cotton</a> as supervisor.</li>
+<li>Responsible for maintaining internal dashboards reporting quality metrics.</li>
+<li>Works with instructors as needed to perform quality-related maintenance on existing courses.</li>
+</ul>
+</div>
+</div>
+<div id="medstar-health-institutes-for-innovation-r-big-data-developer-contract" class="section level4">
+<h4>MedStar Health Institutes for Innovation : R Big Data Developer, Contract</h4>
+<div id="april-2017-present" class="section level5">
+<h5>April 2017 – present</h5>
+<ul>
+<li>Responsible for building and debugging data analysis pipelines (ETL) and instantiating as APIs, testing with PostMan, and maintenance as needed when other use cases become apparent.</li>
+<li>Create research paper templates which allow for testing of large amounts of EMR data to address medical questions brought in by researchers.</li>
+<li>Consults on deep learning projects and data pipelines for other MedStar projects as needed.</li>
+</ul>
+</div>
+</div>
+<div id="here-technologies-data-scientist-quality-testing-and-statistics-team" class="section level4">
+<h4>Here Technologies : Data Scientist, Quality Testing and Statistics Team</h4>
+<div id="june-2017-may-2017" class="section level5">
+<h5>June 2017 – May 2017</h5>
+<ul>
+<li>Main data scientist representative of the Quality Testing and Statistics team. Served as an internal consultant for other teams in the company, advising on experimental design and training data collection for planned machine learning models and advising on best practices in auditing and evaluation quality of models.</li>
+<li>Built R&amp;D prediction models to test the quality of existing production models inside the company and provided insights into how to optimize the real-world testing quality process.</li>
+<li>Responsible for synthesis of large datasets requiring many joins, extensive cleaning of messy data collected in the field, drafting production-level prediction models, and creation of quality scores.</li>
+<li>Wrote spec for data synthesis and reports on analyses, with goal of educating non-data science audience in the company on how to interpret and use results of quality tests.</li>
+</ul>
+</div>
+</div>
+<div id="american-college-of-surgeons-statistician-continuous-quality-improvement" class="section level4">
+<h4>American College of Surgeons : Statistician, Continuous Quality Improvement</h4>
+<div id="june-2016-may-2017" class="section level5">
+<h5>June 2016 – May 2017</h5>
+<ul>
+<li>Conducted risk-adjusted hierarchical modeling with coded hospital data to carry out surgical program quality assessment for MBSAQIP (bariatric surgery) and TransQIP (transplant surgery) data.</li>
+<li>Cleaned datasets for public release for research, including removing all protected health information, checking logic, and flagging errors.</li>
+<li>Advised on best practices for statistical design and analysis of studies, including an integral role in the launch of a nationwide Enhanced Recovery in Bariatric Surgery project, with expertise on survey design, survey scoring, and data collection methods.</li>
+<li>Consulted on UX design of front-end data collection tools.</li>
+</ul>
+</div>
+</div>
+<div id="louisiana-tumor-registry-biostatistician" class="section level4">
+<h4>Louisiana Tumor Registry : Biostatistician</h4>
+<div id="january-2015-may-2016" class="section level5">
+<h5>January 2015 – May 2016</h5>
+<ul>
+<li>Designed and conducted statistical analyses and data modeling efforts for research projects focusing on cancer diagnosis and treatment trends using National Cancer Database (NCDB) data from the American College of Surgeons (ACS), focused on breast, pancreatic, and colorectal cancers (presently, with more projects to come).</li>
+<li>Responsible for extensive research and rewrites of the cancer Facts &amp; Figures program booklets in order for distribution for a more general audience, running cancer statistics as necessary in SEERStat with Survival, Epidemiology and End Results (SEER) data.</li>
+<li>Published 2 papers using univariate and multivariable survival analysis methods plus exploratory data analysis methods.</li>
+</ul>
+<p><br></p>
+</div>
+</div>
+</div>
+<div id="education" class="section level3">
+<h3>Education</h3>
+<div id="louisiana-state-university-health-sciences-center" class="section level4">
+<h4>Louisiana State University Health Sciences Center</h4>
+<p>Master of Science in Biostatistics, August 2014 – May 2016 <br> Advisor: <a href="https://publichealth.lsuhsc.edu/faculty_pages/qyu/index.html">Dr. Qingzhao Yu</a> <br> Thesis title: General multiple mediation analysis to examine ethnic differences in anxiety and depression in cancer survivors using the MY-Health survey. A version of it was published in <a href="https://link.springer.com/article/10.1007/s11336-018-9612-2?wt_mc=Internal.Event.1.SEM.ArticleAuthorOnlineFirst"><strong>Psychometrika</strong></a> in April 2017.</p>
+</div>
+<div id="eastern-michigan-university" class="section level4">
+<h4>Eastern Michigan University</h4>
+<p>Post Baccalaureate education in Math &amp; Biology, September 2012 – June 2014</p>
+</div>
+<div id="university-of-michigan" class="section level4">
+<h4>University of Michigan</h4>
+<p>Bachelor of Arts, Screen Arts and Cultures &amp; Women’s Studies, September 2007 – December 2011</p>
+<p><br></p>
+</div>
+</div>
+<div id="publications" class="section level3">
+<h3>Publications</h3>
+<ul>
+<li><em>Nonlinear Predictive Models for Multiple Mediation Analysis: With an Application to Explore Ethnic Disparities in Anxiety and Depression Among Cancer Survivors.</em> Yu Q, <strong>Medeiros KL</strong>, Wu X, Jensen RE. <em>Psychometrika</em>. 2018 Apr 2. <a href="https://link.springer.com/article/10.1007/s11336-018-9612-2?wt_mc=Internal.Event.1.SEM.ArticleAuthorOnlineFirst">Link</a>.</li>
+<li><em>Outcomes in real-world practice are different than cooperative trial for elderly patients with early breast cancer treated with adjuvant radiation therapy.</em> Chu QD, Zhou M, Peddi P, <strong>Medeiros KL</strong>, Wu XC. <em>Surgery</em>. 2018 Jun;163(6):1213-1219. <a href="https://www.surgjournal.com/article/S0039-6060(18)30034-5/fulltext">Link</a>.</li>
+<li><em>Impact of CALGB 9343 Trial and Sociodemographic Variation on Patterns of Adjuvant Radiation Therapy Practice for Elderly Women (≥70 Years) with Stage I, Estrogen Receptor-positive Breast Cancer: Analysis of the National Cancer Data Base.</em> Chu QD, Zhou M, <strong>Medeiros KL</strong>, Peddi P, Wu XC. <em>Anticancer Res</em>. 2017 Oct;37(10):5585-5594. <a href="http://ar.iiarjournals.org/content/37/10/5585.abstract">Link</a>.</li>
+<li><em>Influence of facility type on survival outcomes after pancreatectomy for pancreatic adenocarcinoma.</em> Chu QD, Zhou M, Peddi P, <strong>Medeiros KL</strong>, Zibari GB, Shokouh-Amiri H, Wu XC. <em>HPB (Oxford)</em>. 2017 Dec;19(12):1046-1057. Epub 2017 Sep 28. <a href="https://www.hpbonline.org/article/S1365-182X(17)30870-5/fulltext">Link</a>.</li>
+<li><em>Poor survival in stage IIB/C (T4N0) compared to stage IIIA (T1-2 N1, T1N2a) colon cancer persists even after adjusting for adequate lymph nodes retrieved and receipt of adjuvant chemotherapy.</em> Chu QD, Zhou M, <strong>Medeiros KL</strong>, Peddi P, Kavanaugh M, Wu XC. <em>BMC Cancer</em>. 2016 Jul 13;16:460. <a href="https://bmccancer.biomedcentral.com/articles/10.1186/s12885-016-2446-3">Link</a>.</li>
+<li><em>RETRACTED: Impact of Cooperative Trial and Sociodemographic Variation on Adjuvant Radiation Therapy Usage in Elderly Women (≥70 Years) with Stage I, Estrogen Receptor-Positive Breast Cancer: Analysis of the National Cancer Data Base.</em> Chu QD, <strong>Medeiros KL</strong>, Zhou M, Peddi P, Wu XC. <em>J Am Coll Surg</em>. 2016 Apr;222(4):667-78. Epub 2016 Jan 27. <a href="https://www.journalacs.org/article/S1072-7515(15)01809-8/pdf">Link</a>.
+<ul>
+<li>This was retracted due to an error on the part of all the authors. One of the variables was not collected for all of the years we thought it was, and we therefore had to issue a retraction.</li>
+</ul></li>
+</ul>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

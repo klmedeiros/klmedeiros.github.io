@@ -1,0 +1,65 @@
+---
+title: ''
+output: html_document
+---
+<br>
+
+###Experience 
+
+####DataCamp : Content Quality Analyst
+#####May 2018 - present
+- First onboarded member of the Content Quality team, with [Richie Cotton](https://www.linkedin.com/in/richierocks) as supervisor.
+- Responsible for maintaining internal dashboards reporting quality metrics.
+- Works with instructors as needed to perform quality-related maintenance on existing courses.
+
+####MedStar Health Institutes for Innovation : R Big Data Developer, Contract
+#####April 2017 – present
+- Responsible for building and debugging data analysis pipelines (ETL) and instantiating as APIs, testing with PostMan, and maintenance as needed when other use cases become apparent.
+- Create research paper templates which allow for testing of large amounts of EMR data to address medical questions brought in by researchers.
+- Consults on deep learning projects and data pipelines for other MedStar projects as needed.
+
+####Here Technologies : Data Scientist, Quality Testing and Statistics Team 
+#####June 2017 – May 2017
+- Main data scientist representative of the Quality Testing and Statistics team. Served as an internal consultant for other teams in the company, advising on experimental design and training data collection for planned machine learning models and advising on best practices in auditing and evaluation quality of models.
+- Built R&D prediction models to test the quality of existing production models inside the company and provided insights into how to optimize the real-world testing quality process.
+- Responsible for synthesis of large datasets requiring many joins, extensive cleaning of messy data collected in the field, drafting production-level prediction models, and creation of quality scores.
+- Wrote spec for data synthesis and reports on analyses, with goal of educating non-data science audience in the company on how to interpret and use results of quality tests.
+
+####American College of Surgeons : Statistician, Continuous Quality Improvement 
+#####June 2016 – May 2017
+- Conducted risk-adjusted hierarchical modeling with coded hospital data to carry out surgical program quality assessment for MBSAQIP (bariatric surgery) and TransQIP (transplant surgery) data.
+- Cleaned datasets for public release for research, including removing all protected health information, checking logic, and flagging errors.
+- Advised on best practices for statistical design and analysis of studies, including an integral role in the launch of a nationwide Enhanced Recovery in Bariatric Surgery project, with expertise on survey design, survey scoring, and data collection methods.
+- Consulted on UX design of front-end data collection tools.
+
+####Louisiana Tumor Registry : Biostatistician 
+#####January 2015 – May 2016
+- Designed and conducted statistical analyses and data modeling efforts for research projects focusing on cancer diagnosis and treatment trends using National Cancer Database (NCDB) data from the American College of Surgeons (ACS), focused on breast, pancreatic, and colorectal cancers (presently, with more projects to come).
+- Responsible for extensive research and rewrites of the cancer Facts & Figures program booklets in order for distribution for a more general audience, running cancer statistics as necessary in SEERStat with Survival, Epidemiology and End Results (SEER) data.
+- Published 2 papers using univariate and multivariable survival analysis methods plus exploratory data analysis methods.
+
+<br>
+
+###Education
+
+####Louisiana State University Health Sciences Center 
+Master of Science in Biostatistics, August 2014 – May 2016 <br>
+Advisor: [Dr. Qingzhao Yu](https://publichealth.lsuhsc.edu/faculty_pages/qyu/index.html) <br>
+Thesis title: General multiple mediation analysis to examine ethnic differences in anxiety and depression in cancer survivors using the MY-Health survey. A version of it was published in [**Psychometrika**](https://link.springer.com/article/10.1007/s11336-018-9612-2?wt_mc=Internal.Event.1.SEM.ArticleAuthorOnlineFirst) in April 2017.
+
+####Eastern Michigan University 
+Post Baccalaureate education in Math & Biology, September 2012 – June 2014
+
+####University of Michigan 
+Bachelor of Arts, Screen Arts and Cultures & Women’s Studies, September 2007 – December 2011
+
+<br>
+
+###Publications
+- *Nonlinear Predictive Models for Multiple Mediation Analysis: With an Application to Explore Ethnic Disparities in Anxiety and Depression Among Cancer Survivors.* Yu Q, **Medeiros KL**, Wu X, Jensen RE. *Psychometrika*. 2018 Apr 2. [Link](https://link.springer.com/article/10.1007/s11336-018-9612-2?wt_mc=Internal.Event.1.SEM.ArticleAuthorOnlineFirst).
+- *Outcomes in real-world practice are different than cooperative trial for elderly patients with early breast cancer treated with adjuvant radiation therapy.* Chu QD, Zhou M, Peddi P, **Medeiros KL**, Wu XC. *Surgery*. 2018 Jun;163(6):1213-1219. [Link](https://www.surgjournal.com/article/S0039-6060(18)30034-5/fulltext).
+- *Impact of CALGB 9343 Trial and Sociodemographic Variation on Patterns of Adjuvant Radiation Therapy Practice for Elderly Women (≥70 Years) with Stage I, Estrogen Receptor-positive Breast Cancer: Analysis of the National Cancer Data Base.* Chu QD, Zhou M, **Medeiros KL**, Peddi P, Wu XC. *Anticancer Res*. 2017 Oct;37(10):5585-5594. [Link](http://ar.iiarjournals.org/content/37/10/5585.abstract).
+- *Influence of facility type on survival outcomes after pancreatectomy for pancreatic adenocarcinoma.* Chu QD, Zhou M, Peddi P, **Medeiros KL**, Zibari GB, Shokouh-Amiri H, Wu XC. *HPB (Oxford)*. 2017 Dec;19(12):1046-1057. Epub 2017 Sep 28. [Link](https://www.hpbonline.org/article/S1365-182X(17)30870-5/fulltext).
+- *Poor survival in stage IIB/C (T4N0) compared to stage IIIA (T1-2 N1, T1N2a) colon cancer persists even after adjusting for adequate lymph nodes retrieved and receipt of adjuvant chemotherapy.* Chu QD, Zhou M, **Medeiros KL**, Peddi P, Kavanaugh M, Wu XC. *BMC Cancer*. 2016 Jul 13;16:460. [Link](https://bmccancer.biomedcentral.com/articles/10.1186/s12885-016-2446-3).
+- *RETRACTED: Impact of Cooperative Trial and Sociodemographic Variation on Adjuvant Radiation Therapy Usage in Elderly Women (≥70 Years) with Stage I, Estrogen Receptor-Positive Breast Cancer: Analysis of the National Cancer Data Base.* Chu QD, **Medeiros KL**, Zhou M, Peddi P, Wu XC. *J Am Coll Surg*. 2016 Apr;222(4):667-78. Epub 2016 Jan 27. [Link](https://www.journalacs.org/article/S1072-7515(15)01809-8/pdf).
+    - This was retracted due to an error on the part of all the authors. One of the variables was not collected for all of the years we thought it was, and we therefore had to issue a retraction.
