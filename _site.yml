@@ -19,6 +19,8 @@ navbar:
         - text: "March 2017"
         - text: "To be determined..."
           href: coming_soon.html
+    - text: "Consulting"
+      href: hire_me.html
 output_dir: "."
 output:
   html_document:
