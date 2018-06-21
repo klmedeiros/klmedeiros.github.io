@@ -2,9 +2,16 @@
 title: ''
 output: html_document
 ---
-
 <br>
 
+####Consulting
 Kaelen is available for freelance statistical & data science consulting work. If you're interested, please send an email to kaelenmedeiros at gmail dot com with a description of your project, how long you anticipate needing a consultant, and as much detail as possible about what you're looking for. Kaelen is willing to work at either an hourly or per-project rate. They can work using R, SAS, SQL, Python, or some combination, and are especially keen to work on projects that are in early stages and involve experimental design.
 
 Alternatively, if Kaelen feels they're not right for the project, they will do their best to pass it along to someone qualified in their professional circle.
+
+####Skills
+- R, SAS, SQL, Python
+- API building (especially for data analysis)
+- experienced with BigQuery and AWS databases
+- proficient in Shiny, especially dashboards
+- coming up on a decade of education experience

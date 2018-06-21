@@ -6,6 +6,7 @@ output: html_document
 
 ###Experience 
 
+###Current
 ####DataCamp : Content Quality Analyst
 #####May 2018 - present
 - First onboarded member of the Content Quality team, with [Richie Cotton](https://www.linkedin.com/in/richierocks) as supervisor.
@@ -18,6 +19,7 @@ output: html_document
 - Create research paper templates which allow for testing of large amounts of EMR data to address medical questions brought in by researchers.
 - Consults on deep learning projects and data pipelines for other MedStar projects as needed.
 
+###Past
 ####Here Technologies : Data Scientist, Quality Testing and Statistics Team 
 #####June 2017 – May 2017
 - Main data scientist representative of the Quality Testing and Statistics team. Served as an internal consultant for other teams in the company, advising on experimental design and training data collection for planned machine learning models and advising on best practices in auditing and evaluation quality of models.
