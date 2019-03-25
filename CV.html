@@ -96,6 +96,9 @@ img {
 button.code-folding-btn:focus {
   outline: none;
 }
+summary {
+  display: list-item;
+}
 </style>
 
 
@@ -110,7 +113,6 @@ body {
   padding-top: 66px;
   margin-top: -66px;
 }
-
 .section h2 {
   padding-top: 66px;
   margin-top: -66px;
@@ -130,6 +132,43 @@ body {
 .section h6 {
   padding-top: 66px;
   margin-top: -66px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -151,18 +190,77 @@ $(document).ready(function () {
 });
 </script>
 
-
 <div class="container-fluid main-container">
 
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
 });
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
 </script>
 
 <!-- code folding -->
-
 
 
 
@@ -235,31 +333,43 @@ $(document).ready(function () {
 </div>
 <div id="current" class="section level3">
 <h3>Current</h3>
-<div id="datacamp-content-quality-analyst" class="section level4">
-<h4>DataCamp : Content Quality Analyst</h4>
-<div id="may-2018---present" class="section level5">
-<h5>May 2018 - present</h5>
+<div id="datacamp-data-scientist-product" class="section level4">
+<h4>DataCamp : Data Scientist, Product</h4>
+<div id="march-2019---present" class="section level5">
+<h5>March 2019 - Present</h5>
 <ul>
-<li>First onboarded member of the Content Quality team, with <a href="https://www.linkedin.com/in/richierocks">Richie Cotton</a> as supervisor.</li>
-<li>Responsible for maintaining internal dashboards reporting quality metrics.</li>
-<li>Works with instructors as needed to perform quality-related maintenance on existing courses.</li>
+<li>Responsible for metric tracking on the Campus app (where learners take courses) plus the mobile and practice apps.</li>
+<li>Help design A/B tests and other product experiments for those two teams.</li>
+<li>Maintain an internal Shiny dashboard tracking product metrics.</li>
 </ul>
-</div>
-</div>
-<div id="medstar-health-institutes-for-innovation-r-big-data-developer-contract" class="section level4">
-<h4>MedStar Health Institutes for Innovation : R Big Data Developer, Contract</h4>
-<div id="april-2017-present" class="section level5">
-<h5>April 2017 – present</h5>
-<ul>
-<li>Responsible for building and debugging data analysis pipelines (ETL) and instantiating as APIs, testing with PostMan, and maintenance as needed when other use cases become apparent.</li>
-<li>Create research paper templates which allow for testing of large amounts of EMR data to address medical questions brought in by researchers.</li>
-<li>Consults on deep learning projects and data pipelines for other MedStar projects as needed.</li>
-</ul>
+<p><br></p>
 </div>
 </div>
 </div>
 <div id="past" class="section level3">
 <h3>Past</h3>
+<div id="datacamp-content-quality-analyst" class="section level4">
+<h4>DataCamp : Content Quality Analyst</h4>
+<div id="may-2018---march-2019" class="section level5">
+<h5>May 2018 - March 2019</h5>
+<ul>
+<li>First onboarded member of the Content Quality team, with <a href="https://www.linkedin.com/in/richierocks">Richie Cotton</a> as supervisor.</li>
+<li>Responsible for maintaining production Shiny dashboard used both internally and externally (instructor-facing) that tracks course quality metrics.</li>
+<li>Worked with instructors as needed to perform quality-related maintenance on existing courses.</li>
+</ul>
+</div>
+</div>
+<div id="medstar-health-institutes-for-innovation-r-big-data-developer-contract" class="section level4">
+<h4>MedStar Health Institutes for Innovation : R Big Data Developer, Contract</h4>
+<div id="april-2017-july-2018" class="section level5">
+<h5>April 2017 – July 2018</h5>
+<ul>
+<li>Responsible for building and debugging data analysis pipelines (ETL) and instantiating them as APIs, testing with PostMan, and maintenance as needed when other use cases become apparent.</li>
+<li>Created research paper templates which allow for testing of large amounts of EMR data to address medical questions brought in by researchers.</li>
+<li>Consulted on deep learning projects and data pipelines for other MedStar projects as needed.</li>
+</ul>
+</div>
+</div>
 <div id="here-technologies-data-scientist-quality-testing-and-statistics-team" class="section level4">
 <h4>Here Technologies : Data Scientist, Quality Testing and Statistics Team</h4>
 <div id="june-2017-may-2017" class="section level5">
@@ -323,7 +433,7 @@ $(document).ready(function () {
 <li><em>Poor survival in stage IIB/C (T4N0) compared to stage IIIA (T1-2 N1, T1N2a) colon cancer persists even after adjusting for adequate lymph nodes retrieved and receipt of adjuvant chemotherapy.</em> Chu QD, Zhou M, <strong>Medeiros KL</strong>, Peddi P, Kavanaugh M, Wu XC. <em>BMC Cancer</em>. 2016 Jul 13;16:460. <a href="https://bmccancer.biomedcentral.com/articles/10.1186/s12885-016-2446-3">Link</a>.</li>
 <li><em>RETRACTED: Impact of Cooperative Trial and Sociodemographic Variation on Adjuvant Radiation Therapy Usage in Elderly Women (≥70 Years) with Stage I, Estrogen Receptor-Positive Breast Cancer: Analysis of the National Cancer Data Base.</em> Chu QD, <strong>Medeiros KL</strong>, Zhou M, Peddi P, Wu XC. <em>J Am Coll Surg</em>. 2016 Apr;222(4):667-78. Epub 2016 Jan 27. <a href="https://www.journalacs.org/article/S1072-7515(15)01809-8/pdf">Link</a>.
 <ul>
-<li>This was retracted due to an error on the part of all the authors. One of the variables was not collected for all of the years we thought it was, and we therefore had to issue a retraction.</li>
+<li>This was retracted due to an error on the part of all the authors. One of the variables was not collected for all of the years we thought it had been, and we therefore had to issue a retraction.</li>
 </ul></li>
 </ul>
 </div>

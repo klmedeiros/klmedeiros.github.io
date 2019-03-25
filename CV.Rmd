@@ -7,19 +7,27 @@ output: html_document
 ###Experience 
 
 ###Current
-####DataCamp : Content Quality Analyst
-#####May 2018 - present
-- First onboarded member of the Content Quality team, with [Richie Cotton](https://www.linkedin.com/in/richierocks) as supervisor.
-- Responsible for maintaining internal dashboards reporting quality metrics.
-- Works with instructors as needed to perform quality-related maintenance on existing courses.
+####DataCamp : Data Scientist, Product
+#####March 2019 - Present
+- Responsible for metric tracking on the Campus app (where learners take courses) plus the mobile and practice apps.
+- Help design A/B tests and other product experiments for those two teams.
+- Maintain an internal Shiny dashboard tracking product metrics.
 
-####MedStar Health Institutes for Innovation : R Big Data Developer, Contract
-#####April 2017 – present
-- Responsible for building and debugging data analysis pipelines (ETL) and instantiating as APIs, testing with PostMan, and maintenance as needed when other use cases become apparent.
-- Create research paper templates which allow for testing of large amounts of EMR data to address medical questions brought in by researchers.
-- Consults on deep learning projects and data pipelines for other MedStar projects as needed.
+<br>
 
 ###Past
+####DataCamp : Content Quality Analyst
+#####May 2018 - March 2019
+- First onboarded member of the Content Quality team, with [Richie Cotton](https://www.linkedin.com/in/richierocks) as supervisor.
+- Responsible for maintaining production Shiny dashboard used both internally and externally (instructor-facing) that tracks course quality metrics.
+- Worked with instructors as needed to perform quality-related maintenance on existing courses.
+
+####MedStar Health Institutes for Innovation : R Big Data Developer, Contract
+#####April 2017 – July 2018
+- Responsible for building and debugging data analysis pipelines (ETL) and instantiating them as APIs, testing with PostMan, and maintenance as needed when other use cases become apparent.
+- Created research paper templates which allow for testing of large amounts of EMR data to address medical questions brought in by researchers.
+- Consulted on deep learning projects and data pipelines for other MedStar projects as needed.
+
 ####Here Technologies : Data Scientist, Quality Testing and Statistics Team 
 #####June 2017 – May 2017
 - Main data scientist representative of the Quality Testing and Statistics team. Served as an internal consultant for other teams in the company, advising on experimental design and training data collection for planned machine learning models and advising on best practices in auditing and evaluation quality of models.
@@ -64,4 +72,4 @@ Bachelor of Arts, Screen Arts and Cultures & Women’s Studies, September 2007 �
 - *Influence of facility type on survival outcomes after pancreatectomy for pancreatic adenocarcinoma.* Chu QD, Zhou M, Peddi P, **Medeiros KL**, Zibari GB, Shokouh-Amiri H, Wu XC. *HPB (Oxford)*. 2017 Dec;19(12):1046-1057. Epub 2017 Sep 28. [Link](https://www.hpbonline.org/article/S1365-182X(17)30870-5/fulltext).
 - *Poor survival in stage IIB/C (T4N0) compared to stage IIIA (T1-2 N1, T1N2a) colon cancer persists even after adjusting for adequate lymph nodes retrieved and receipt of adjuvant chemotherapy.* Chu QD, Zhou M, **Medeiros KL**, Peddi P, Kavanaugh M, Wu XC. *BMC Cancer*. 2016 Jul 13;16:460. [Link](https://bmccancer.biomedcentral.com/articles/10.1186/s12885-016-2446-3).
 - *RETRACTED: Impact of Cooperative Trial and Sociodemographic Variation on Adjuvant Radiation Therapy Usage in Elderly Women (≥70 Years) with Stage I, Estrogen Receptor-Positive Breast Cancer: Analysis of the National Cancer Data Base.* Chu QD, **Medeiros KL**, Zhou M, Peddi P, Wu XC. *J Am Coll Surg*. 2016 Apr;222(4):667-78. Epub 2016 Jan 27. [Link](https://www.journalacs.org/article/S1072-7515(15)01809-8/pdf).
-    - This was retracted due to an error on the part of all the authors. One of the variables was not collected for all of the years we thought it was, and we therefore had to issue a retraction.
+    - This was retracted due to an error on the part of all the authors. One of the variables was not collected for all of the years we thought it had been, and we therefore had to issue a retraction.
