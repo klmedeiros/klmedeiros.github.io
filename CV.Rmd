@@ -8,15 +8,17 @@ output: html_document
 
 ###Current
 ####DataCamp : Data Scientist, Product
-#####March 2019 - Present
-- Responsible for metric tracking on the Campus app (where learners take courses) plus the mobile and practice apps.
-- Help design A/B tests and other product experiments for those two teams.
-- Maintain an internal Shiny dashboard tracking product metrics.
+#####March 2019 - December 2019
+- Develop metrics to guide product team and individual product squads.
+- Build and maintain dashboard of product metrics, plus own relevant product sections of other company dashboards.
+- Maintain and develop product-related data views in company data lake, built with R or Redshift SQL and executed using CircleCI and Airflow.
+- Conduct ad-hoc analyses for squads and product research on user behavior.
+- Design and analyze product A/B tests with product managers and company-wide experimentation team.
 
 <br>
 
 ###Past
-####DataCamp : Content Quality Analyst
+####DataCamp : Content Quality Data Scientist
 #####May 2018 - March 2019
 - First onboarded member of the Content Quality team, with [Richie Cotton](https://www.linkedin.com/in/richierocks) as supervisor.
 - Responsible for maintaining production Shiny dashboard used both internally and externally (instructor-facing) that tracks course quality metrics.
