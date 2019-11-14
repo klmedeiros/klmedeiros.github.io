@@ -6,9 +6,9 @@ output: html_document
 <br>
 <img src="images/kaelen_red.jpg" align="left" height="300px" width="200px" hspace="20" />
 
-Kaelen likes cats, podcasts, aliens, and data. They are basically always on [**twitter**](http://twitter.com/kaelen_medeiros) and consistently have at least two RStudio projects open at a time on both their work and personal computers. 
+Kaelen likes cats, podcasts, aliens, and data. They are basically always on [**twitter**](http://twitter.com/kaelen_medeiros) and consistently have at least four RStudio projects open at a time on both their work and personal computers. 
 
-Kaelen works as a statistician and data scientist. Currently, they're a Data Scientist on the Product team at [**DataCamp**](https://www.datacamp.com/home), where they're responsible for the campus app (the place where you take courses) plus the mobile and practice apps. Kaelen also authored a course on [**Experimental Design in R**](https://www.datacamp.com/courses/experimental-design-in-r). Kaelen is available for consulting work as a freelance data scientist focused on experimental design, API development, and automation in statistics and data science.
+Kaelen works as a data scientist focused on experimental design, API development, and automation in statistics and data science. Currently, they're available for hire in NYC and remote. Most recently, Kaelen was a Data Scientist on the Product team at [**DataCamp**](https://www.datacamp.com/home), where they established DataCamp's north star metric, worked extensively on dashboarding and cleaning data from the products, and helped build experiments with the team. Kaelen also authored a course on [**Experimental Design in R**](https://www.datacamp.com/courses/experimental-design-in-r), with an update to the Building Web Apps in Shiny course to come in January 2020. 
 
 Kaelen received their MS in Biostatistics from the School of Public Health at [**Louisiana State University Health Sciences Center**](http://sph.lsuhsc.edu/) in 2016. <br>
 
