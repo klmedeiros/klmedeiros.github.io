@@ -10,6 +10,12 @@ Kaelen likes cats, podcasts, aliens, and data. They are basically always on [**t
 
 Kaelen works as a data scientist focused on experimental design, API development, and automation in statistics and data science. Currently, they're available for hire in NYC and remote. Most recently, Kaelen was a Data Scientist on the Product team at [**DataCamp**](https://www.datacamp.com/home), where they established DataCamp's north star metric, worked extensively on dashboarding and cleaning data from the products, and helped build experiments with the team. Kaelen also authored a course on [**Experimental Design in R**](https://www.datacamp.com/courses/experimental-design-in-r), with an update to the Building Web Apps in Shiny course to come in January 2020. 
 
+<br>
+
+Kaelen loves to speak at conferences. Check out their talk from Nor'easter Conf 2019 on [**Modularizing and Debugging Shiny Apps**](https://github.com/klmedeiros/noreastr-2018-slides) or their talk from the DC R conference 2019 on [**tidymetrics & shinybones**](https://github.com/klmedeiros/dc-r-conf-2019). They'd love to come speak at your conference about technical topics or soft skills alike.
+
+<br>
+
 Kaelen received their MS in Biostatistics from the School of Public Health at [**Louisiana State University Health Sciences Center**](http://sph.lsuhsc.edu/) in 2016. <br>
 
 ----
