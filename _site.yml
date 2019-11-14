@@ -6,8 +6,6 @@ navbar:
       href: contact.html
     - text: "CV"
       href: CV.html  
-    - text: "Organizations"
-      href: organizations.html  
     - text: "Blog"
       menu:
         - text: "May 2017"
