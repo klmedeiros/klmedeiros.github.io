@@ -7,6 +7,11 @@ output: html_document
 ###Experience 
 
 ###Current
+- Kaelen is currently for hire! Contact them at kaelenmedeiros at gmail dot com.
+
+<br>
+
+###Past
 ####DataCamp : Data Scientist, Product
 #####March 2019 - December 2019
 - Develop metrics to guide product team and individual product squads.
@@ -15,9 +20,6 @@ output: html_document
 - Conduct ad-hoc analyses for squads and product research on user behavior.
 - Design and analyze product A/B tests with product managers and company-wide experimentation team.
 
-<br>
-
-###Past
 ####DataCamp : Content Quality Data Scientist
 #####May 2018 - March 2019
 - First onboarded member of the Content Quality team, with [Richie Cotton](https://www.linkedin.com/in/richierocks) as supervisor.
