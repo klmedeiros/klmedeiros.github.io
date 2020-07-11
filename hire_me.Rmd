@@ -4,18 +4,17 @@ output: html_document
 ---
 <br>
 
-#### Hire Kaelen
 
-As of mid-December 2019, Kaelen is available for hire as a full-time data scientist! Please contact them at kaelenmedeiros at gmail dot com if you think you have a role they'd be qualified for.
+#### Consulting
+Kaelen is available for freelance statistical & data science consulting work. They're very experienced in building data pipelines, Shiny apps (especially dashboards), APIs, and ad-hoc analyses for clients. Kaelen owns KLM Analytics, LLC, and can be employed through the LLC. 
 
-####Consulting
-Kaelen is available for freelance statistical & data science consulting work. If you're interested, please send an email to kaelenmedeiros at gmail dot com with a description of your project, how long you anticipate needing a consultant, and as much detail as possible about what you're looking for. Kaelen is willing to work at either an hourly or per-project rate. They can work using R, SAS, SQL, Python, or some combination, and are especially keen to work on projects that are in early stages and involve experimental design.
+If you're interested, please send an email to kaelenmedeiros at gmail dot com with a description of your project, how long you anticipate needing a consultant, and as much detail as possible about what you're looking for. Kaelen is willing to work at either an hourly or per-project rate. They can work using R, SAS, SQL, Python, or some combination, and are especially keen to work on projects that are in early stages and involve experimental design.
 
 Alternatively, if Kaelen feels they're not right for the project, they will do their best to pass it along to someone qualified in their professional circle.
 
-####Skills
+#### Skills
 - R, SAS, SQL, Python
 - API building (especially for data analysis)
-- experienced with BigQuery, AWS, Airflow, Spark
+- Experienced with BigQuery, AWS, Airflow, Spark
 - Shiny app developer with 2 years experience building apps & dashboards
-- coming up on a decade of education experience
+- Coming up on a decade of education experience
