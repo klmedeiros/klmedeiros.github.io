@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -69,9 +69,7 @@ h6 {
 </style>
 
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -85,7 +83,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -190,8 +187,6 @@ $(document).ready(function () {
 });
 </script>
 
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
 
 <style type="text/css">
@@ -236,6 +231,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -248,20 +244,17 @@ $(document).ready(function () {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -339,8 +332,7 @@ $(document).ready(function () {
 <ol start="4" style="list-style-type: decimal">
 <li><em>Don’t underestimate the small stuff</em>: Working on this project so far, I’ve gotten a lot more comfortable using Atom. I’ve written programs in Atom and executed them from my terminal. I’m actually learning how to navigate the command line and what cd actually <em>means</em> (which, how did I not get that before??), rather than googling and copying directly. I’m picking things up, little by little, and that’s such a crucial part of this process.</li>
 </ol>
-<div id="some-things-i-learned-on-purpose" class="section level1">
-<h1>Some things I learned on purpose:</h1>
+<p>#Some things I learned on purpose:</p>
 <ol style="list-style-type: decimal">
 <li><em>API client</em>: With a partner, I built a client for interacting with the <a href="https://swapi.co/"><strong>Star Wars API</strong></a>. This is one of the assignments for rmotr.com’s Advanced Python course, and you can see my code in <a href="https://github.com/klmedeiros/pyp-w2-gw-starwars-api"><strong>this GH repository:</strong></a>. This was my first real introduction to APIs, other than hearing the word tossed around a lot, and it proved swiftly to not be my last tango with the ol’ application program interface(s) of the world. As per #4 above, this was the first program I helped write where I remembered to use .format(), a la:</li>
 </ol>
@@ -357,23 +349,19 @@ $(document).ready(function () {
 <ol start="3" style="list-style-type: decimal">
 <li><em>Got a new side gig</em>: At my new freelance Data Scientist gig (moving on up in the world, y’all), I write R code, create an API endpoint in a Jupyter notebook which acts as a “worker” for a program of interconnected workers, all performing different parts of a complete statistical analysis. The workers are connected in a program built in Python, and once I’m more competent at building the endpoints, I get to help on that program too. I’ve seen some of the code and it’s going to be challenging, and I truly can’t wait.</li>
 </ol>
-</div>
-<div id="regarding-our-actual-chipy-mentorship-project" class="section level1">
-<h1>Regarding our Actual ChiPy Mentorship Project</h1>
-<p>Even before I set out to scrape the NUFORC, I knew dataset was already on <a href="https://www.kaggle.com/NUFORC/ufo-sightings"><strong>Kaggle</strong></a> and was additionally available in this <a href="https://github.com/planetsig/ufo-reports"><strong>GitHub repository.</strong></a>. I still wanted to try my hand at scraping, and Arpit is working on an actual solution using BeautifulSoup right now.</p>
+<p>#Regarding our Actual ChiPy Mentorship Project Even before I set out to scrape the NUFORC, I knew dataset was already on <a href="https://www.kaggle.com/NUFORC/ufo-sightings"><strong>Kaggle</strong></a> and was additionally available in this <a href="https://github.com/planetsig/ufo-reports"><strong>GitHub repository.</strong></a>. I still wanted to try my hand at scraping, and Arpit is working on an actual solution using BeautifulSoup right now.</p>
 <p>I’m currently working on descriptive data analysis using numPy and Pandas. We plan to regroup this weekend and do scoping and decide how big our project can really be in the next few months. We’d love to do some prediction using TensorFlow and other machine learning methods. The dataset is large: about 80k sightings, and the dataset on Kaggle is also geocoded. My specific goals over the course of the ChiPy Mentorship Program include:</p>
 <ol style="list-style-type: decimal">
 <li><p>Become proficient in numPy, Pandas, Seaborn, and matplotlib</p></li>
 <li><p>Start to get familiar with scikit-learn’s methods of doing machine learning (excellent because I’ll basically be doing the same methods in tandem in R for my side gig)</p></li>
 <li><p>Continue learning how to utilize TensorFlow to explore my interest in deep learning, either with the NUFORC data or complementary data</p></li>
 <li><p>Actually scrape a relevant website to collect useful information</p></li>
-<li>Create a cool portfolio project to showcase both my strong statistical base and my newfound Python skills, care of my mentor Arpit and the other participants in the spring 2017 ChiPy Mentorship Program.<br />
-
+<li><p>Create a cool portfolio project to showcase both my strong statistical base and my newfound Python skills, care of my mentor Arpit and the other participants in the spring 2017 ChiPy Mentorship Program.<br />
+</p>
 <center>
-<img src="images/ufo.jpg" />
+<p><img src="images/ufo.jpg" /></p>
 </center></li>
 </ol>
-</div>
 
 
 
@@ -392,6 +380,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

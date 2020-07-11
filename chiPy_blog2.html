@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -69,9 +69,7 @@ h6 {
 </style>
 
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -85,7 +83,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -190,8 +187,6 @@ $(document).ready(function () {
 });
 </script>
 
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
 
 <style type="text/css">
@@ -236,6 +231,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -248,20 +244,17 @@ $(document).ready(function () {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -333,14 +326,17 @@ $(document).ready(function () {
 <p>I wanted to go through my cleaning step-by-step, but in R, you have to keep re-importing packages and the data in each code block, so I’ll put a large portion of it below, with comments in the code. This blog is intended to be a high-level overview of my cleaning, so not all of the code will be here. <br></p>
 <pre class="python"><code>import pandas as pd
 import numpy as np
+
 #import the dataset, using read_csv from pandas
 nuforc = pd.read_csv(&#39;./scrubbedB.csv&#39;, na_values=[&#39;.&#39;], low_memory=False)
+
 #data cleaning, dates
 nuforc[&#39;date&#39;] = pd.to_datetime(nuforc[&#39;date&#39;], errors=&#39;coerce&#39;)
 nuforc.insert(1, &#39;year&#39;, nuforc[&#39;date&#39;].dt.year)
 nuforc[&#39;year&#39;] = nuforc[&#39;year&#39;].fillna(0).astype(int)
 nuforc.insert(2, &#39;month&#39;, nuforc[&#39;date&#39;].dt.month)
 nuforc.insert(3, &#39;day&#39;, nuforc[&#39;date&#39;].dt.day)
+
 #clean up other columns
 nuforc[&#39;city&#39;] = nuforc[&#39;city&#39;].str.title()
 nuforc[&#39;state&#39;] = nuforc[&#39;state&#39;].str.upper()
@@ -348,6 +344,7 @@ nuforc[&#39;country&#39;] = nuforc[&#39;country&#39;].str.upper()
 nuforc[&#39;latitude&#39;] = pd.to_numeric(nuforc[&#39;latitude&#39;], errors=&#39;coerce&#39;)
 nuforc = nuforc.rename(columns={&#39;longitude &#39;:&#39;longitude&#39;})
 nuforc[&#39;date posted&#39;] = pd.to_datetime(nuforc[&#39;date posted&#39;], errors=&#39;coerce&#39;)
+
 #now examine datatypes
 print(nuforc.dtypes)</code></pre>
 <p>I first learned, very quickly, that I should import pandas <em>as</em> pd and numpy <em>as</em> np. My first run-through cleaning, I didn’t do this, and it made life complicated to impossible. I cleaned dates and times as described above, and broke apart day, month, and year to make some graphs, which I’ll show later. <br></p>
@@ -355,15 +352,20 @@ print(nuforc.dtypes)</code></pre>
 <pre class="python"><code>import pandas as pd
 #import the dataset again
 nuforc = pd.read_csv(&#39;./scrubbedB.csv&#39;, na_values=[&#39;.&#39;], low_memory=False)
+
 nuforc[&#39;duration (seconds)&#39;].describe()
 #HUGE range here of times. 
+
 #Define times for the bins:
 bins = [0, 30, 180, 600, 97836000]
+
 #Create group names:
 group_names = [&#39;Q1&#39;, &#39;Q2&#39;, &#39;Q3&#39;, &#39;Q4&#39;]
+
 #Cut the duration (seconds) variable
 duration_cats = pd.cut(nuforc[&#39;duration (seconds)&#39;], bins, labels=group_names)
 nuforc[&#39;duration_cats&#39;] = pd.cut(nuforc[&#39;duration (seconds)&#39;], bins, labels=group_names)
+
 #display a few, to demonstrate:
 print(duration_cats[1])
 print(duration_cats[10000])</code></pre>
@@ -374,6 +376,7 @@ print(duration_cats[10000])</code></pre>
 import pandas as pd
 #import the dataset again
 nuforc = pd.read_csv(&#39;./scrubbedB.csv&#39;, na_values=[&#39;.&#39;], low_memory=False)
+
 #dict must include every single value, even if mapping to the same category!!
 dict = {&#39;changed&#39;:&#39;changing&#39;, &#39;changing&#39;:&#39;changing&#39;, &#39;cross&#39;:&#39;other&#39;, &#39;hexagon&#39;:&#39;other&#39;,
         &#39;light&#39;:&#39;light_related&#39;, &#39;flare&#39;:&#39;light_related&#39;, &#39;flash&#39;:&#39;light_related&#39;, 
@@ -385,6 +388,7 @@ dict = {&#39;changed&#39;:&#39;changing&#39;, &#39;changing&#39;:&#39;changing&#
         &#39;fireball&#39;:&#39;ovular&#39;,&#39;unknown&#39;:&#39;unknown&#39;, &#39;other&#39;:&#39;other&#39;, &#39;formation&#39;:&#39;formation&#39;, &#39;round&#39;:&#39;round&#39;}
 #actual mapping below:
 nuforc[&#39;clean_shape&#39;]=nuforc[&#39;shape&#39;].map(dict)
+
 print(nuforc[&#39;clean_shape&#39;].value_counts())</code></pre>
 <p>These look a lot cleaner and easier to work with, so I hope to use these moving foward, but may also make a second with further collapsed categories. <br></p>
 <p>One of the visualization-based cleaning exercises I undertook was to make some basic frequency plots in matplotlib. I wanted to see frequencies of UFO spots across both the months of the years and the days of the month to try and spot patterns. I used the documentation for Seaborn to build these, which I found very helpful and thorough.<br></p>
@@ -399,9 +403,11 @@ nuforc.insert(1, &#39;year&#39;, nuforc[&#39;date&#39;].dt.year)
 nuforc[&#39;year&#39;] = nuforc[&#39;year&#39;].fillna(0).astype(int)
 nuforc.insert(2, &#39;month&#39;, nuforc[&#39;date&#39;].dt.month)
 nuforc.insert(3, &#39;day&#39;, nuforc[&#39;date&#39;].dt.day)
+
 #make a histogram of months
 sns.countplot(x=&quot;month&quot;, data=nuforc, palette=&quot;Greens_d&quot;);
 sns.plt.show()
+
 #histogram of days
 sns.countplot(x=&quot;day&quot;, data=nuforc, palette=&quot;Greens_d&quot;);
 sns.plt.show()</code></pre>
@@ -432,6 +438,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
