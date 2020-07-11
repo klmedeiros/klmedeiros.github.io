@@ -4,20 +4,16 @@ output: html_document
 --- 
 <br>
 <br>
-<img src="images/kaelen_red.jpg" align="left" height="300px" width="200px" hspace="20" />
+<img src="images/kaelen_red.jpg" align="left" height="300px" width="300px" hspace="20" />
 
 Kaelen likes cats, podcasts, aliens, and data. They are basically always on [**twitter**](http://twitter.com/kaelen_medeiros) and consistently have at least four RStudio projects open at a time on both their work and personal computers. 
 
 Kaelen works as a data scientist focused on experimental design, API development, and automation in statistics and data science. Currently, they're a data scientist on the Platform Data Science team at [**Medidata Solutions**](https://www.medidata.com/en/). They're also a board member for [**R-Ladies NYC**](https://www.rladiesnyc.org/), where they help to plan and organize R-programming related meetups. Previously, Kaelen was a data scientist at [**Spring Health**](https://www.springhealth.com/), where they worked to bring a definition of provider quality and built the company's first data pipeline. They've also worked on the Product team at [**DataCamp**](https://www.datacamp.com/home), where they established DataCamp's north star metric, worked extensively on dashboarding and cleaning data from the products, and helped build experiments with the team. Kaelen also authored a course for DataCamp on [**Experimental Design in R**](https://www.datacamp.com/courses/experimental-design-in-r) and co-authored a course on [**Building Web Applications in Shiny**](https://learn.datacamp.com/courses/building-web-applications-with-shiny-in-r) with Ramnath Vaidyanathan.
 
-<br>
-
 Kaelen loves to speak and give worshops both at conferences and online. Check out their talk from Nor'easter Conf 2019 on [**Modularizing and Debugging Shiny Apps**](https://github.com/klmedeiros/noreastr-2018-slides) or their talk from the DC R conference 2019 on [**tidymetrics & shinybones**](https://github.com/klmedeiros/dc-r-conf-2019), which you can also watch on the [**Lander Analytics youtube channel**](https://www.youtube.com/watch?v=BL5NBRxnl3E). Kaelen gave an [**Introduction to Shiny workshop**](https://github.com/klmedeiros/rladies-tunisia-july2020-intro-shiny) to R-Ladies Tunisia in July of 2020 that's also available on the [**R-Ladies Tunis youtube channel**](https://www.youtube.com/watch?v=6S4R8RhcV6I&list=PL3PpX4fNIhsPHgCfs1SiVZC6waqpBz8Co). They'd love to come speak to your organization or give a workshop about technical topics or professional skills needed to succeed in data science alike.
-
-<br>
 
 Kaelen received their MS in Biostatistics from the School of Public Health at [**Louisiana State University Health Sciences Center**](http://sph.lsuhsc.edu/) in 2016. <br>
 
 ----
 
-This website was built using the tutorial developed by Julie Lowndes available  [**here**](https://jules32.github.io/rmarkdown-website-tutorial/index.html). 
+This website was built using the tutorial developed by Julie Lowndes available  [**here**](https://jules32.github.io/rmarkdown-website-tutorial/index.html). Last updated `r Sys.Date()`.
