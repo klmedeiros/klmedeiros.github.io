@@ -36,7 +36,7 @@ output: html_document
 - Consulted on deep learning projects and data pipelines for other MedStar projects as needed.
 
 #### HERE Technologies : Data Scientist, Quality Testing and Statistics Team 
-##### June 2017 – May 2017
+##### June 2017 – May 2018
 - Main data scientist representative of the Quality Testing and Statistics team. Served as an internal consultant for other teams in the company, advising on experimental design and training data collection for planned machine learning models and advising on best practices in auditing and evaluation quality of models.
 - Built R&D prediction models to test the quality of existing production models inside the company and provided insights into how to optimize the real-world testing quality process.
 - Responsible for synthesis of large datasets requiring many joins, extensive cleaning of messy data collected in the field, drafting production-level prediction models, and creation of quality scores.
