@@ -1,5 +1,5 @@
 ---
-title: "CV"
+title: ""
 output: html_document
 ---
 <br>
@@ -9,7 +9,7 @@ output: html_document
 ### Current
 #### Medidata : Data Scientist
 ##### June 2020 - Present
-- Member of the Platform Data Sciences team working on the Detect product.
+- Member of the Platform Data Sciences team working on the Detect product, a series of microservices written in R and run on AWS.
 - Built and maintain a Shiny app to help speed up manual testing of Detect product.
 
 <br>
